@@ -181,7 +181,7 @@ scripts:
 
   `hexo-theme-Chic\themes\Chic\source\js`
 
-  Then add declarition in _config.yml key word 'script'
+  Then add declareation in _config.yml key word 'script'
 
 ## Gallary 图片展示
 ![screely-1560228577821.png](https://i.loli.net/2019/06/12/5d00a0850285252790.png)
