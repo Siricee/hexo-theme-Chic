@@ -4,7 +4,7 @@
 <img src="https://i.loli.net/2019/06/12/5d006bd289aa325037.png" alt="Chic theme">
 </p>
 
-> Chic , means 'Elegant' in Franch.
+> Chic ,French word means 'Elegant' in English.
 
 <p align="center">
 <img alt="Author" src="https://img.shields.io/badge/Author-Sirice-blue.svg"/>
