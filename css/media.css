@@ -1,0 +1,152 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .main {
+    padding-top: 40pt;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar-mobile {
+    display: block !important;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.6s ease 0s;
+  }
+  .navbar-mobile .container {
+    padding: 0;
+    margin: 0;
+    line-height: 5.5em;
+    background: $light-background-color;
+  }
+  .navbar-mobile .container .navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 1em;
+    padding-left: 1em;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle {
+    cursor: pointer;
+    line-height: 5.5em;
+    padding: auto 2em;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle span {
+    display: block;
+    background: #000;
+    width: 36px;
+    height: 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: 0.25s margin 0.25s, 0.25s transform;
+    -moz-transition: 0.25s margin 0.25s, 0.25s transform;
+    transition: 0.25s margin 0.25s, 0.25s transform;
+  }
+  .dark-theme .navbar-mobile .container .navbar-header .menu-toggle span {
+    background: $dark-font-color;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(1) {
+    margin-bottom: 8px;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle span:nth-child(3) {
+    margin-top: 8px;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle.active span {
+    -webkit-transition: 0.25s margin, 0.25s transform 0.25s;
+    -moz-transition: 0.25s margin, 0.25s transform 0.25s;
+    transition: 0.25s margin, 0.25s transform 0.25s;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(1) {
+    -moz-transform: rotate(45deg) translate(4px, 6px);
+    -ms-transform: rotate(45deg) translate(4px, 6px);
+    -webkit-transform: rotate(45deg) translate(4px, 6px);
+    transform: rotate(45deg) translate(4px, 6px);
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar-mobile .container .navbar-header .menu-toggle.active span:nth-child(3) {
+    -moz-transform: rotate(-45deg) translate(8px, -10px);
+    -ms-transform: rotate(-45deg) translate(8px, -10px);
+    -webkit-transform: rotate(-45deg) translate(8px, -10px);
+    transform: rotate(-45deg) translate(8px, -10px);
+  }
+  .navbar-mobile .container .menu {
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #000;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: none;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1), 0px 4px 8px rgba(0,0,0,0.1);
+  }
+  .navbar-mobile .container .menu a {
+    display: inline-block;
+    margin: 0 1em;
+    line-height: 2.5em;
+  }
+  .navbar-mobile .container .menu.active {
+    display: block;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow-x: auto;
+  }
+  .dark-theme .navbar-mobile .container .menu {
+    background: $dark-background-color;
+    border-top: 2px solid $dark-font-secondary-color;
+  }
+  .dark-theme .navbar-mobile .container {
+    background: $dark-background-color !important;
+  }
+  .archive {
+    width: 90%;
+  }
+  .archive .archive-item .archive-item-date {
+    display: none;
+  }
+  #dynamic-to-top {
+    display: none !important;
+  }
+  .footer {
+    height: 3rem;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5rem;
+    padding-top: 2em;
+  }
+  .post-warp {
+    padding-top: 6em;
+  }
+  .post-warp .archive-item-date {
+    display: none;
+  }
+  .categories .categories-card .card-item {
+    width: 100%;
+    display: flex;
+    min-height: 0;
+  }
+  .categories .categories-card .card-item .categories {
+    overflow: hidden;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) {
+  .navbar-mobile {
+    display: none;
+  }
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1024px) {
+  .navbar-mobile {
+    display: none;
+  }
+}
+/* post toc Style */
+@media (max-width: 1279px) {
+  .post-toc {
+    display: none;
+  }
+}
