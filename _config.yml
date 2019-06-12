@@ -36,7 +36,7 @@ links:
 #  Gallary:
 #  RSS:
 #  AliPay:
-#  ZhiHu:
+  ZhiHu: https://www.zhihu.com/people/sirice
 #  LinkedIn:
 #  FaceBook:
 #  Twitter:
@@ -49,10 +49,10 @@ links:
   Instagram:
   Reddit:
 #  YouTube:
-  QQ:
+#  QQ:
 #  Weibo:
 #  WeChat:
-  Github:
+  Github: https://github.com/Sirice19
 
 # how links show: you have 2 choice--text or icon.
 links_text_enable: false
@@ -94,4 +94,3 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
   - /js/script.js
-

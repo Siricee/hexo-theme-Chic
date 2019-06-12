@@ -1,7 +1,7 @@
 <div class="container">
     <div class="intro">
         <div class="avatar">
-            <a href="<%- theme.nav.Posts %>"><img src="<%- theme.avatar %>"></a>
+            <a href="<%- theme.nav.Posts %>"><img src="<%- url_for(theme.avatar) %>"></a>
         </div>
         <div class="nickname"><%- theme.nickname %></div>
         <div class="description"><%- markdown(theme.description) %></div>
