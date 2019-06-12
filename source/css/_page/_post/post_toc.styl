@@ -1,0 +1,71 @@
+// ========== TOC ========== //
+$global-body-width= 820px
+// Width of the post toc.
+$post-toc-width= 15rem
+
+// Backgroud color of the post toc.
+// initalized blockquote color.
+//$post-toc-backgroud= $light-post-blockquote-background-color
+$post-toc-backgroud = $light-background-color
+// Margin left of the post toc.
+$post-toc-margin-left= $global-body-width - 15px
+
+// Font size of the post toc title.
+$post-toc-title-size= 1em
+
+// Font size of the post toc content.
+$post-toc-content= .8em
+
+// List style of the post toc list.
+$post-toc-list-style= none
+
+
+.post-toc 
+  position: fixed
+  //position absolute
+  top 10em
+  right 2em
+  width: $post-toc-width
+  max-height 30em
+  padding: 1rem
+  border-radius: 5px
+  background: $post-toc-backgroud
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125)
+  word-wrap: break-word
+  box-sizing: border-box
+  overflow-x auto
+  text-align center
+  .dark-theme &
+    background $dark-background-color
+  &::-webkit-scrollbar
+    width 6px
+    height 6px
+  &::-webkit-scrollbar-thumb
+    width 6px
+    background-color #eee
+    border-radius 2px
+
+  .post-toc-title 
+    margin: 0 .5em
+    font-size: $post-toc-title-size
+    font-weight: 400
+    text-transform: uppercase
+    text-align center
+    width 100%
+  .post-toc-content
+    text-align left
+    white-space nowrap
+    font-size: $post-toc-content
+    .toc,
+    .toc-child
+      list-style: $post-toc-list-style
+      padding-left: 20px
+      line-height 1.5em
+      .toc-child
+        padding-left: 15px
+
+    .toc-link.active
+      color: $theme-color
+    
+  
+

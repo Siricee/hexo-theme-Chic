@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<%
+var title = page.title;
+
+if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+        title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+        title += ': ' + page.year;
+    }
+} else if (is_category()){
+    title = __('category') + ': ' + page.category;
+} else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+}
+%>
+<title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+
+<%# favicon %>
+<% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+<% } %>
+
+<%# css list %>
+<% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <!-- stylesheets list from _config.yml -->
+    <% theme.stylesheets.forEach(url => { %>
+    <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+<% } %>
+
+<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+    <!-- scripts list from _config.yml -->
+    <% theme.scripts.forEach(url => { %>
+    <script src="<%=url%>"></script>
+    <% }); %>
+<% } %>
+

@@ -1,0 +1,43 @@
+.post-content
+  code, pre
+    padding 7px
+    font-size 13px
+    font-family Consolas, Monaco, Menlo, Consolas, monospace
+  code
+    padding 3px 5px
+    border-radius 4px
+    color $light-code-font-color
+    background $light-code-background-color
+    .dark-theme &
+      color $dark-code-font-color
+      background $dark-code-background-color
+
+  figure.highlight
+    margin 1em 0
+    overflow-x auto
+    position relative
+    &::-webkit-scrollbar
+      width 6px
+      height 6px
+    &::-webkit-scrollbar-thumb
+      width 6px
+      background-color #eee
+      border-radius 2px
+    table
+      position relative
+    table, tr, td
+      margin 0
+      padding 0
+      border 0
+      width 100%
+      border-collapse collapse
+    .code
+      pre
+        margin 0 10px
+
+    // line number
+    .gutter
+      width 10px
+      color #d0d0d0
+      pre
+        margin 0
