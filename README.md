@@ -138,8 +138,8 @@ post_copyright_author_enable: true
 post_copyright_permalink_enable: true
 post_copyright_license_enable: true
 post_copyright_license_text: Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
-post_copyright_solgan_enable: true
-post_copyright_solgan_text: Do you believe in <strong>DESTINY<strong>?
+post_copyright_slogan_enable: true
+post_copyright_slogan_text: Do you believe in <strong>DESTINY<strong>?
 ## toc
 post_toc_enable: true
 
