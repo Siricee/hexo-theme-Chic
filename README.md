@@ -19,6 +19,7 @@
 - [Demo 演示](#demo-演示)
 - [Features 特点](#features-特点)
 - [Installation 安装](#installation-安装)
+- [Configuration 配置](#configuration-配置)
 - [Customize 自定义](#customize-自定义)
 - [Gallary 图片展示](#gallary-图片展示)
 - [License 开源许可](#license-开源许可)
@@ -162,6 +163,30 @@ scripts:
   - /js/script.js
 ```
 </details>
+<br>
+Hexo初始化没有tag、category页面，需要自行添加，本主题请按以下步骤进行:<br>
+There is no 'tag' or 'category' page in initialized site. If you need it, please follow the steps below.
+
+1. 执行命令 execute command
+```bash
+hexo new page tag
+hexo new page category
+```
+2. 进入页面目录 enter the dictionary
+```bash
+cd source/tag
+```
+3. 增加layout字段 add 'layout' key
+```yaml
+// source\tag\index.md
+---
+title: Tag
+layout: tag
+---
+```
+4. category页面同理，layout字段键值为category。 <br>
+   So do the category page.please set keyword 'layout' category.
+
 
 ## Customize 自定义
 - 代码高亮风格 在`hexo-theme-Chic\themes\Chic\source\css\style.styl`中更改highlight为`_highlight`文件夹中的stylus文件即可更换代码高亮风格。
