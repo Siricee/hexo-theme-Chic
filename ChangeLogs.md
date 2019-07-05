@@ -1,4 +1,7 @@
 Changelogs
+## v1.2 - 2019.7.6
+
+add MathJax support,now you can type math formula in LaTeX.
 
 ## v1.1 - 2019.7.5
 
