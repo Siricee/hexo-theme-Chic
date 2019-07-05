@@ -1,5 +1,9 @@
 Changelogs
 
+## v1.1 - 2019.7.5
+
+add component fragment_cache in layout to decline requests in render process.
+
 ## v1.0 - 2019.6.11
 
 Release the first version.
