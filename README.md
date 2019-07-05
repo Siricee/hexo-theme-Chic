@@ -37,7 +37,7 @@ An elegant,powerful,easy-to-read Hexo theme.
 - [Demo site](https://sirice19.github.io/hexo-theme-Chic)
 - [Author's blog](https://sirice19.github.io/)
 
-## Features 特点
+## Features
 - Appropriate blank blocks,elegant but not simple.
 
 - Light/Dark theme，just one click.
