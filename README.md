@@ -48,6 +48,8 @@ An elegant,powerful,easy-to-read Hexo theme.
 
 - Auto fit Mobile and Screen responsively.
 
+- Support MathJax,Support Formula written in LaTeX.
+
 ## Installation
 
 ```bash
