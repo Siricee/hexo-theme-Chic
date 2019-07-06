@@ -34,8 +34,8 @@
 An elegant,powerful,easy-to-read Hexo theme.
 
 ## Demo
-- [Demo site](https://sirice19.github.io/hexo-theme-Chic)
-- [Author's blog](https://sirice19.github.io/)
+- [Demo site](https://siricee.github.io/hexo-theme-Chic)
+- [Author's blog](https://siricee.github.io/)
 
 ## Features
 - Appropriate blank blocks,elegant but not simple.
@@ -252,6 +252,6 @@ LaTeX grammers will not be illustrated in this doc. In Chic theme, Single '$' ro
 ![smartmockups_jwrd9y4r.png](https://i.loli.net/2019/06/12/5d00a085ec26284832.png)
 
 ## LICENSE
-Chic © [@Sirice](https://github.com/Sirice19)
+Chic © [@Sirice](https://github.com/Siricee)
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

@@ -35,8 +35,8 @@
 优雅、功能全面、阅读友好的hexo主题。
 
 ## Demo 演示
-- [Demo site](https://sirice19.github.io/hexo-theme-Chic)
-- [作者的博客](https://sirice19.github.io/)
+- [Demo site](https://siricee.github.io/hexo-theme-Chic)
+- [作者的博客](https://siricee.github.io/)
 
 ## Features 特点
 - 恰到好处的留白，优雅却不简陋。
@@ -239,6 +239,6 @@ LaTeX语法这里不做解释，本主题中，单dollar符号包围的为行内
 ![smartmockups_jwrd9y4r.png](https://i.loli.net/2019/06/12/5d00a085ec26284832.png)
 
 ## LICENSE 开源许可
-Chic © [@Sirice](https://github.com/Sirice19)
+Chic © [@Sirice](https://github.com/Siricee)
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
