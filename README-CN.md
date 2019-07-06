@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://github.com/Sirice19/hexo-theme-Chic" target="_blank">Chic Theme</a></h1>
+<h1 align="center"><a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic Theme</a></h1>
 
 <p align="center">
 <img src="https://i.loli.net/2019/06/12/5d006bd289aa325037.png" alt="Chic theme">
@@ -50,7 +50,7 @@
 
 ```bash
 cd your-blog/themes
-git clone https://github.com/Sirice19/hexo-theme-Chic.git Chic
+git clone https://github.com/Siricee/hexo-theme-Chic.git Chic
 // Modify theme setting in _config.yml to Chic.
 ```
 
@@ -113,7 +113,7 @@ links:
 #  QQ:
 #  Weibo:
 #  WeChat:
-  Github: https://github.com/Sirice19
+  Github: https://github.com/Siricee
 
 # how links show: you have 2 choice--text or icon.
 links_text_enable: false
@@ -217,7 +217,7 @@ mathjax:
     mathjax: true # 加入这个声明，这篇文章就会开启mathjax渲染
     ---
     ```
-LaTeX语法这里不做解释，本主题中，单dollar符号包围的为行内公式，例：`$f(x)=ax+b$`，双dollar符号包围的为块公式，例`$$f(x)=ax+b$$`更多写法请参考LaTeX和[Demo site中的公式测试页面](https://sirice19.github.io/hexo-theme-Chic/2019/07/05/MathJax_test/)。
+LaTeX语法这里不做解释，本主题中，单dollar符号包围的为行内公式，例：`$f(x)=ax+b$`，双dollar符号包围的为块公式，例`$$f(x)=ax+b$$`更多写法请参考LaTeX和[Demo site中的公式测试页面](https://siricee.github.io/hexo-theme-Chic/2019/07/05/MathJax_test/)。
 
 
 

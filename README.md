@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://github.com/Sirice19/hexo-theme-Chic" target="_blank">Chic Theme</a></h1>
+<h1 align="center"><a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic Theme</a></h1>
 
 <p align="center">
 <img src="https://i.loli.net/2019/06/12/5d006bd289aa325037.png" alt="Chic theme">
@@ -54,7 +54,7 @@ An elegant,powerful,easy-to-read Hexo theme.
 
 ```bash
 cd your-blog/themes
-git clone https://github.com/Sirice19/hexo-theme-Chic.git Chic
+git clone https://github.com/Siricee/hexo-theme-Chic.git Chic
 // Modify theme setting in _config.yml to Chic.
 ```
 
@@ -117,7 +117,7 @@ links:
 #  QQ:
 #  Weibo:
 #  WeChat:
-  Github: https://github.com/Sirice19
+  Github: https://github.com/Siricee
 
 # how links show: you have 2 choice--text or icon.
 links_text_enable: false
@@ -222,7 +222,7 @@ mathjax:
     mathjax: true # add this statement,MathJax will enable in this post.
     ---
     ```
-LaTeX grammers will not be illustrated in this doc. In Chic theme, Single '$' rounded statement is regarded as inline formula like `$f(x)=ax+b$` ; Double '$' rounded statement is regarded as block formula like `$$f(x)=ax+b$$`.More information please read LaTeX doc and [Formula test page in Demo Site](https://sirice19.github.io/hexo-theme-Chic/2019/07/05/MathJax_test/).
+LaTeX grammers will not be illustrated in this doc. In Chic theme, Single '$' rounded statement is regarded as inline formula like `$f(x)=ax+b$` ; Double '$' rounded statement is regarded as block formula like `$$f(x)=ax+b$$`.More information please read LaTeX doc and [Formula test page in Demo Site](https://siricee.github.io/hexo-theme-Chic/2019/07/05/MathJax_test/).
 
 
 
