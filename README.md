@@ -159,6 +159,9 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
   - /js/script.js
+  - /js/tocbot.min.js
+    # tscanlin/tocbot: Build a table of contents from headings in an HTML document.
+    # https://github.com/tscanlin/tocbot
 
 
 # plugin functions
@@ -166,7 +169,7 @@ scripts:
 ## https://www.mathjax.org
 mathjax:
   enable: true
-  import: global # global or demand
+  import: demand # global or demand
   ## global: all pages will load mathjax,this will degrade performance and some grammers may be parsed wrong.
   ## demand: Recommend option,if your post need fomula, you can declare 'mathjax: true' in Front-matter
 ```
