@@ -31,6 +31,8 @@
     
     <script src="/hexo-theme-Chic/js/script.js"></script>
     
+    <script src="/hexo-theme-Chic/js/tocbot.min.js"></script>
+    
 
 
 
@@ -143,13 +145,69 @@
             <div class="container">
     
     
-        <div id="post-toc" class="post-toc">
-            <span class="post-toc-title">catalogue</span>
-            <div class="post-toc-content">
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#行内公式与块公式"><span class="toc-text">行内公式与块公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上标与下标"><span class="toc-text">上标与下标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#括号"><span class="toc-text">括号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分数与开方"><span class="toc-text">分数与开方</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#求和与积分"><span class="toc-text">求和与积分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#极限"><span class="toc-text">极限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表格与矩阵"><span class="toc-text">表格与矩阵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#矩阵"><span class="toc-text">矩阵</span></a></li></ol>
-            </div>
-        </div>
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
     
+
     
     <article class="post-wrap">
         <header class="post-header">
@@ -177,14 +235,15 @@
             
         </header>
 
-        <section class="post-content">
+        <div class="post-content">
             <h2 id="行内公式与块公式"><a href="#行内公式与块公式" class="headerlink" title="行内公式与块公式"></a>行内公式与块公式</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$f(x)=ax+b$ 这是行内公式.</span><br><span class="line">$$f(x)=ax+b$$ 这是块公式，单独占一行.</span><br></pre></td></tr></table></figure>
 
 <p>$f(x)=ax+b$ 这是行内公式.<br>$$f(x)=ax+b$$ 这是块公式，单独占一行.</p>
 <h2 id="上标与下标"><a href="#上标与下标" class="headerlink" title="上标与下标"></a>上标与下标</h2><p>使用 <code>^</code> 表示上标，使用 <code>_</code> 表示下标，如果上下标的内容多于一个字符，可以使用大括号括起来：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$f(x) = a_1x^n + a_2x^&#123;n-1&#125; + a_3x^&#123;n-2&#125;$$</span><br></pre></td></tr></table></figure>
 
-<p>显示效果：<br>$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$</p>
+<p>显示效果：</p>
+<p>$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$</p>
 <p>如果左右两边都有上下标可以使用 \sideset 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\sideset&#123;^n_k&#125;&#123;^x_y&#125;a$$</span><br></pre></td></tr></table></figure>
 
@@ -234,7 +293,7 @@
 
 <p>显示效果：<br>$$\frac{\partial u}{\partial t}<br>= h^2 \left( \frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)$$</p>
 
-        </section>
+        </div>
 
         
             <section class="post-copyright">
