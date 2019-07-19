@@ -26,6 +26,7 @@
 - [Installation 安装](#installation-安装)
 - [Configuration 配置](#configuration-配置)
 - [Customize 自定义](#customize-自定义)
+- [FAQ 提问](#faq-提问)
 - [Gallary 图片展示](#gallary-图片展示)
 - [License 开源许可](#license-开源许可)
 
@@ -223,13 +224,28 @@ mathjax:
 LaTeX语法这里不做解释，本主题中，单dollar符号包围的为行内公式，例：`$f(x)=ax+b$`，双dollar符号包围的为块公式，例`$$f(x)=ax+b$$`更多写法请参考LaTeX和[Demo site中的公式测试页面](https://siricee.github.io/hexo-theme-Chic/2019/07/05/MathJax_test/)。
 
 
-
 ## Customize 自定义
 - 代码高亮风格 在`hexo-theme-Chic\themes\Chic\source\css\style.styl`中更改highlight为`_highlight`文件夹中的stylus文件即可更换代码高亮风格。
 
 - 自定义css(stylus语法) 您可以在`hexo-theme-Chic\themes\Chic\source\css\custom.styl`路径文件中添加css规则
 
 - 自定义JavaScript 您可以在`hexo-theme-Chic\themes\Chic\source\js`路径中添加js脚本，并在_config.yml中`script`字段添加声明。
+
+## FAQ 提问
+1. 我在二级地址（非github page根repo，即username.github.io/Blog）上部署了hexo，为什么css、avatar等资源都404了？
+
+    答：此处需要另外填写主配置文件URL字段。以该主题repo为例：
+    ```yaml
+    # (blog/_config.yml)
+    
+    # URL
+    ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+    url: https://siricee.github.io/hexo-theme-Chic/  # 此处为你的部署url
+    root: /hexo-theme-Chic/  # 此处为你的项目根文件夹url。
+    permalink: :year/:month/:day/:title/
+    permalink_defaults:
+    ```
+2. 常见问题待补充……    
 
 ## Gallary 图片展示
 ![screely-1560228577821.png](https://i.loli.net/2019/06/12/5d00a0850285252790.png)

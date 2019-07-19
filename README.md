@@ -26,6 +26,7 @@
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Customize](#customize)
+- [FAQ](#faq)
 - [Gallary](#gallary)
 - [License](#license)
 
@@ -243,6 +244,23 @@ LaTeX grammers will not be illustrated in this doc. In Chic theme, Single '$' ro
   `hexo-theme-Chic\themes\Chic\source\js`
 
   Then add declareation in _config.yml key word 'script'
+
+## FAQ
+
+1. I deployed my site on second-level url(such as username.github.io/Blog), why my css,avatar and other sources  missed(404 error)?
+
+    Answer: You need change some URLs in root config url keyword. For instance:
+    ```yaml
+    # (blog/_config.yml)
+
+    # URL
+    ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+    url: https://siricee.github.io/hexo-theme-Chic/  # this is your deploy url.
+    root: /hexo-theme-Chic/  # this is your root folder url.
+    permalink: :year/:month/:day/:title/
+    permalink_defaults:
+    ```
+2. More questions is waiting to be supplied...
 
 ## Gallary
 ![screely-1560228577821.png](https://i.loli.net/2019/06/12/5d00a0850285252790.png)
