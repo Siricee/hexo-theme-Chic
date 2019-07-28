@@ -1,4 +1,8 @@
 Changelogs
+## 2019.7.26
+\[fix bugs\] Merge pull request from EvilCult/bug-timeformat.
+
+fix variable time_format doesn't work in page. 
 
 ## v1.3 - 2019.7.9
 
