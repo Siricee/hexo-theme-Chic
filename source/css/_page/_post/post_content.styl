@@ -98,7 +98,7 @@
         background $dark-post-table-background-color
     th, td
       padding 5px 15px
-      border .5px double $light-border-color
+      border .5px solid $light-border-color
 
 
   .image-caption:not(:empty)
@@ -134,7 +134,20 @@
     //box-shadow 1px 1px 2px rgba(0,0,0,0.125)
     p
       margin 0
+    footer
+      strong
+        margin-right 0.5em
     .dark-theme &
       color $dark-font-color
       background-color $dark-post-blockquote-background-color
       border-left 2px solid $dark-post-blockquote-border-color
+    &.pullquote
+      background-color transparent
+      max-width 45%
+      border 0
+      &.left
+        float left
+        text-align left
+      &.right
+        float right
+        text-align right 

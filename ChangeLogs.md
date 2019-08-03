@@ -1,4 +1,9 @@
 Changelogs
+## v1.4 - 2019.8.3
+
+\[enhancement\] add pullquote style support.
+
+\[optimization\] add Quote style,especially author field.
 ## 2019.7.26
 \[fix bugs\] Merge pull request from EvilCult/bug-timeformat.
 
