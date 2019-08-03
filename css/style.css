@@ -850,7 +850,6 @@ header label {
   max-width: 100%;
   margin: 10px 0;
   border-spacing: 0;
-  box-shadow: 2px 2px 3px rgba(0,0,0,0.125);
 }
 .post-content table thead {
   background: #bce1ef;
@@ -861,7 +860,7 @@ header label {
 .post-content table th,
 .post-content table td {
   padding: 5px 15px;
-  border: 0.5px double #e8e8e8;
+  border: 0.5px solid #e8e8e8;
 }
 .post-content .image-caption:not(:empty) {
   min-width: 20%;
@@ -897,10 +896,26 @@ header label {
 .post-content blockquote p {
   margin: 0;
 }
+.post-content blockquote footer strong {
+  margin-right: 0.5em;
+}
 .dark-theme .post-content blockquote {
   color: #a9a9b3;
   background-color: #3e3e3e;
   border-left: 2px solid #dcdcdc;
+}
+.post-content blockquote.pullquote {
+  background-color: transparent;
+  max-width: 45%;
+  border: 0;
+}
+.post-content blockquote.pullquote.left {
+  float: left;
+  text-align: left;
+}
+.post-content blockquote.pullquote.right {
+  float: right;
+  text-align: right;
 }
 .post-copyright {
   margin-top: 5rem;
@@ -958,6 +973,14 @@ header label {
   width: 6px;
   background-color: #eee;
   border-radius: 2px;
+}
+.post-content figure.highlight figcaption {
+  padding: 0 0.5em;
+  text-align: right;
+  font-size: 13px;
+}
+.post-content figure.highlight figcaption span {
+  margin: 0 0.5em;
 }
 .post-content figure.highlight table {
   position: relative;
@@ -1228,61 +1251,47 @@ header label {
   }
 }
 .highlight {
-  color: #657b83;
-  background: #fdf6e3;
-}
-.highlight .code .comment,
-.highlight .code .quote {
-  color: #93a1a1;
+  color: #00193a;
+  background: #eaeef3;
 }
 .highlight .code .keyword,
 .highlight .code .selector-tag,
-.highlight .code .addition {
-  color: #859900;
-}
-.highlight .code .number,
-.highlight .code .string,
-.highlight .code .meta .meta-string,
-.highlight .code .literal,
-.highlight .code .doctag,
-.highlight .code .regexp {
-  color: #2aa198;
-}
 .highlight .code .title,
 .highlight .code .section,
+.highlight .code .doctag,
+.highlight .code .name,
+.highlight .code .strong {
+  font-weight: bold;
+}
+.highlight .code .comment {
+  color: #738191;
+}
+.highlight .code .string,
+.highlight .code .title,
+.highlight .code .section,
+.highlight .code .built_in,
+.highlight .code .literal,
+.highlight .code .type,
+.highlight .code .addition,
+.highlight .code .tag,
+.highlight .code .quote,
 .highlight .code .name,
 .highlight .code .selector-id,
 .highlight .code .selector-class {
-  color: #268bd2;
+  color: #0048ab;
 }
+.highlight .code .meta,
+.highlight .code .subst,
+.highlight .code .symbol,
+.highlight .code .regexp,
 .highlight .code .attribute,
-.highlight .code .attr,
+.highlight .code .deletion,
 .highlight .code .variable,
 .highlight .code .template-variable,
-.highlight .code .class .title,
-.highlight .code .type {
-  color: #b58900;
-}
-.highlight .code .symbol,
-.highlight .code .bullet,
-.highlight .code .subst,
-.highlight .code .meta,
-.highlight .code .meta .keyword,
-.highlight .code .selector-attr,
-.highlight .code .selector-pseudo,
-.highlight .code .link {
-  color: #cb4b16;
-}
-.highlight .code .built_in,
-.highlight .code .deletion {
-  color: #dc322f;
-}
-.highlight .code .formula {
-  background: #eee8d5;
+.highlight .code .link,
+.highlight .code .bullet {
+  color: #4c81c9;
 }
 .highlight .code .emphasis {
   font-style: italic;
-}
-.highlight .code .strong {
-  font-weight: bold;
 }
