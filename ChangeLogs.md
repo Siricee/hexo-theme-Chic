@@ -4,6 +4,8 @@ Changelogs
 \[enhancement\] add pullquote style support.
 
 \[optimization\] add Quote style,especially author field.
+
+\[fix bugs\] fix 'home' button at the bottom of post page linked to wrong path in secondary dictionary.
 ## 2019.7.26
 \[fix bugs\] Merge pull request from EvilCult/bug-timeformat.
 
