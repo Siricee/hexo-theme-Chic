@@ -57,3 +57,26 @@ if (is_archive()){
         <% } %>
     <% } %>
 <% } %>
+
+<% if(theme.analytics.google_enable!==null&&theme.analytics.google_enable===true){ %>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.analytics.google_tracking_id %>"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '<%- theme.analytics.google_tracking_id %>');
+</script>
+<% } %>
+
+<% if(theme.analytics.baidu_enable!==null&&theme.analytics.baidu_enable===true){ %>
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?<%- theme.analytics.baidu_tracking_id %>";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<% } %>
