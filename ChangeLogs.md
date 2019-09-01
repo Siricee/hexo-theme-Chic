@@ -3,6 +3,8 @@ Changelogs
 
 \[fix bugs\] hide checkbox of switch button in header (in MacOS enviornment)
 
+\[optimization\] change paragraph spacing 0.5em to 1em.Now it's more clear.
+
 ## v1.4 - 2019.8.3
 
 \[enhancement\] add pullquote style support.
