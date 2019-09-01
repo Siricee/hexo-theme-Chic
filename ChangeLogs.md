@@ -1,4 +1,8 @@
 Changelogs
+## 2019.9.1
+
+\[fix bugs\] hide checkbox of switch button in header (in MacOS enviornment)
+
 ## v1.4 - 2019.8.3
 
 \[enhancement\] add pullquote style support.
