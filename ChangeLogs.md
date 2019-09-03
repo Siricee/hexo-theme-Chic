@@ -1,4 +1,8 @@
 Changelogs
+## 2019.9.3
+
+\[fix bugs\] fix mistake of `@media` page width adaptation under 480px.
+
 ## 2019.9.1
 
 \[fix bugs\] hide checkbox of switch button in header (in MacOS enviornment)
