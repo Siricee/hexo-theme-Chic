@@ -1,7 +1,11 @@
 Changelogs
+## 2019.9.4
+
+\[fix bugs\] fix mistake of media query.(due 9.3 bug still remains.) Changed max-device-width to max-width.
+
 ## 2019.9.3
 
-\[fix bugs\] fix mistake of `@media` page width adaptation under 480px.
+\[fix bugs\] fix mistake of media query. Page width adaptation under 480px.
 
 ## 2019.9.1
 
