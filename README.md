@@ -20,15 +20,19 @@
 - [English](README.md)
 
 ## Contents
+- [Doc language](#doc-language)
+- [Contents](#contents)
 - [Introduction](#introduction)
 - [Demo](#demo)
 - [Features](#features)
 - [Installation](#installation)
 - [Configuration](#configuration)
+  - [Add 'Tag','Category' Page](#add-tagcategory-page)
+  - [MathJax (Render LaTeX Formula)](#mathjax-render-latex-formula)
 - [Customize](#customize)
 - [FAQ](#faq)
 - [Gallary](#gallary)
-- [License](#license)
+- [LICENSE](#license)
 
 
 ## Introduction
@@ -260,7 +264,21 @@ LaTeX grammers will not be illustrated in this doc. In Chic theme, Single '$' ro
     permalink: :year/:month/:day/:title/
     permalink_defaults:
     ```
-2. More questions is waiting to be supplied...
+
+2. How to set the dark theme as default theme for whole site automatically?
+   
+   Answer: You need to change some codes in `themes\Chic\source\js\script.js`, function `doucument.ready` as below.
+   ```javascript
+   document.ready(
+    function () {
+        // ...Omit part of the code
+        const isDark = currentTheme === 'dark';
+        // change this line to
+        // const isDark = currentTheme !== 'dark';
+   ```
+   Now, you have already set the dark theme as default successfully.
+
+3. More questions will be added later...
 
 ## Gallary
 ![screely-1560228577821.png](https://i.loli.net/2019/06/12/5d00a0850285252790.png)

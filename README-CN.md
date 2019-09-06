@@ -245,7 +245,21 @@ LaTeX语法这里不做解释，本主题中，单dollar符号包围的为行内
     permalink: :year/:month/:day/:title/
     permalink_defaults:
     ```
-2. 常见问题待补充……    
+
+2. 我想将黑色主题设为默认全局主题该怎么做？
+   
+   答：此处只需要改一下`themes\Chic\source\js\script.js`中`doucument.ready`函数的内容。代码如下
+   ```javascript
+   document.ready(
+    function () {
+        // ...省略代码
+        const isDark = currentTheme === 'dark';
+        // 此行改为
+        // const isDark = currentTheme !== 'dark';
+   ```
+   即可实现效果。
+
+3. 常见问题待补充……  
 
 ## Gallary 图片展示
 ![screely-1560228577821.png](https://i.loli.net/2019/06/12/5d00a0850285252790.png)
