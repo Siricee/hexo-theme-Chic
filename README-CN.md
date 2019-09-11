@@ -88,7 +88,7 @@ avatar: /image/avatar.jpeg
 ## Complete url after key words.
 ## Unused key can be commented out.
 links:
-  Blog: /
+  Blog: /archives
 #  Category:
 #  Tags:
 #  Link:
