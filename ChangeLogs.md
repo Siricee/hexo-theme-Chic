@@ -1,4 +1,8 @@
 Changelogs
+## 2019.9.11
+
+\[deprecated\] deprecated variable `theme.language`, which can be instead of `config.language`.
+
 ## 2019.9.4
 
 \[fix bugs\] fix mistake of media query.(due 9.3 bug still remains.) Changed max-device-width to max-width.

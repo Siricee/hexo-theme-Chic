@@ -68,9 +68,6 @@ git clone https://github.com/Siricee/hexo-theme-Chic.git Chic
 <summary><mark>click here to spread</mark></summary>
 
 ```yaml
-# html lang
-language: en
-
 # Header
 navname: Bentham's Blog
 
