@@ -250,12 +250,12 @@ a:hover {
 *{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-input[type="checkbox"],input[type="radio"]{
-    /*display: none;*/
+/* input[type="checkbox"],input[type="radio"]{
+    display: none;
     width: 0;
     height: 0;
-    /*visibility: hidden;*/
-}
+    visibility: hidden;
+} */
 input[type="checkbox"]:checked + label:after{
     transition: all 0.3s ease-in;
 }
@@ -273,6 +273,9 @@ input[type="checkbox"]:checked + label i:after,input[type="checkbox"]:not(:check
 input[type="radio"]:checked + label:after,
 input[type="radio"]:not(:checked) + label:after {
     transition: all 0.3s ease-in-out;
+}
+.switch_default[type="checkbox"]{
+    display: none;
 }
 .switch_default + label{
      background-color: #e6e6e6;
@@ -663,16 +666,6 @@ header label {
 .post-wrap .categories-card .card-item .categories {
   overflow: hidden;
 }
-.categories h3 {
-  display: inline-block;
-}
-.categories span {
-  float: right;
-  padding-right: 1em;
-}
-.categories .more-post-link {
-  float: right;
-}
 .tag-cloud-tags {
   margin: 10px 0;
   padding-top: 2em;
@@ -713,7 +706,7 @@ header label {
 }
 .post-wrap p {
   font-size: 1em;
-  margin: 0.5em 0 0.5em 0;
+  margin: 1em 0 1em 0;
 }
 .post-wrap .post-header h1 {
   margin: 0 !important;
@@ -875,7 +868,7 @@ header label {
 }
 .post-content img {
   display: block;
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   margin: 0 auto;
   overflow: hidden;
@@ -946,11 +939,13 @@ header label {
 }
 .post-content code,
 .post-content pre {
+  line-height: 1.7em;
   padding: 7px;
   font-size: 13px;
   font-family: Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .post-content code {
+  line-height: 1.7em;
   padding: 3px 5px;
   border-radius: 4px;
   color: #c7254e;
@@ -1101,7 +1096,7 @@ header label {
 }
 .toc{overflow-y:auto}.toc>.toc-list{overflow:hidden;position:relative}.toc>.toc-list li{list-style:none}.toc-list{margin:0;padding-left:10px}a.toc-link{color:currentColor;height:100%}.is-collapsible{max-height:1000px;overflow:hidden;transition:all 300ms ease-in-out}.is-collapsed{max-height:0}.is-position-fixed{position:fixed !important;top:0}.is-active-link{font-weight:700}.toc-link::before{background-color:#EEE;content:' ';display:inline-block;height:inherit;left:0;margin-top:-1px;position:absolute;width:2px}.is-active-link::before{background-color:#54BC4B}
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media screen and (max-width: 479px) {
   .main {
     padding-top: 40pt;
   }
@@ -1235,63 +1230,115 @@ header label {
     overflow: hidden;
   }
 }
-@media only screen and (min-device-width: 768px) {
+@media screen and (max-width: 1023px) {
   .navbar-mobile {
     display: none;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .navbar-mobile {
     display: none;
   }
 }
-@media (max-width: 1279px) {
+@media screen and (max-width: 1279px) {
   .post-toc {
     display: none;
   }
 }
-.highlight {
-  color: #00193a;
-  background: #eaeef3;
+.post-content figure.highlight {
+  margin: 2em 0;
+  background: #f7f7f7;
+  color: #4d4d4c;
+  font-size: 12px;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
-.highlight .code .keyword,
-.highlight .code .selector-tag,
-.highlight .code .title,
-.highlight .code .section,
-.highlight .code .doctag,
-.highlight .code .name,
-.highlight .code .strong {
-  font-weight: bold;
+.post-content figure.highlight .gutter {
+  color: $hight-gutter;
 }
-.highlight .code .comment {
-  color: #738191;
+.post-content figure.highlight pre {
+  background: #f7f7f7;
+  margin: 0;
 }
-.highlight .code .string,
-.highlight .code .title,
-.highlight .code .section,
-.highlight .code .built_in,
-.highlight .code .literal,
-.highlight .code .type,
-.highlight .code .addition,
-.highlight .code .tag,
-.highlight .code .quote,
-.highlight .code .name,
-.highlight .code .selector-id,
-.highlight .code .selector-class {
-  color: #0048ab;
+.post-content code {
+  padding: 2px 4px;
+  background: #f7f7f7;
+  font-family: Menlo, Monaco, Consolas, Courier New, monospace;
+  font-size: 12px;
 }
-.highlight .code .meta,
-.highlight .code .subst,
-.highlight .code .symbol,
-.highlight .code .regexp,
-.highlight .code .attribute,
-.highlight .code .deletion,
-.highlight .code .variable,
-.highlight .code .template-variable,
-.highlight .code .link,
-.highlight .code .bullet {
-  color: #4c81c9;
+.post-content pre {
+  padding: 10px;
+  overflow: auto;
+  background: #f7f7f7;
+  font-family: Menlo, Monaco, Consolas, Courier New, monospace;
 }
-.highlight .code .emphasis {
-  font-style: italic;
+.post-content pre code {
+  padding: 0;
+}
+.post-content pre .deletion {
+  background: #fdd;
+}
+.post-content pre .addition {
+  background: #dfd;
+}
+.post-content pre .meta {
+  color: #8959a8;
+}
+.post-content pre .comment {
+  color: #8e908c;
+}
+.post-content pre .variable,
+.post-content pre .attribute,
+.post-content pre .tag,
+.post-content pre .regexp,
+.post-content pre .ruby .constant,
+.post-content pre .xml .tag .title,
+.post-content pre .xml .pi,
+.post-content pre .xml .doctype,
+.post-content pre .html .doctype,
+.post-content pre .css .id,
+.post-content pre .css .class,
+.post-content pre .css .pseudo {
+  color: #c82829;
+}
+.post-content pre .number,
+.post-content pre .preprocessor,
+.post-content pre .built_in,
+.post-content pre .literal,
+.post-content pre .params,
+.post-content pre .constant,
+.post-content pre .command {
+  color: #f5871f;
+}
+.post-content pre .ruby .class .title,
+.post-content pre .css .rules .attribute,
+.post-content pre .string,
+.post-content pre .value,
+.post-content pre .inheritance,
+.post-content pre .header,
+.post-content pre .ruby .symbol,
+.post-content pre .xml .cdata,
+.post-content pre .special,
+.post-content pre .number,
+.post-content pre .formula {
+  color: #718c00;
+}
+.post-content pre .title,
+.post-content pre .css .hexcolor {
+  color: #3e999f;
+}
+.post-content pre .function,
+.post-content pre .python .decorator,
+.post-content pre .python .title,
+.post-content pre .ruby .function .title,
+.post-content pre .ruby .title .keyword,
+.post-content pre .perl .sub,
+.post-content pre .javascript .title,
+.post-content pre .coffeescript .title {
+  color: #4271ae;
+}
+.post-content pre .keyword,
+.post-content pre .javascript .function {
+  color: #8959a8;
 }

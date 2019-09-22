@@ -1,4 +1,5 @@
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+/* mobile phone and smart portable devices */
+@media screen and (max-width: 479px) {
   .main {
     padding-top: 40pt;
   }
@@ -133,19 +134,19 @@
   }
 }
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) {
+@media screen and (max-width: 1023px) {
   .navbar-mobile {
     display: none;
   }
 }
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .navbar-mobile {
     display: none;
   }
 }
 /* post toc Style */
-@media (max-width: 1279px) {
+@media screen and (max-width: 1279px) {
   .post-toc {
     display: none;
   }
