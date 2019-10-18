@@ -1,4 +1,13 @@
 Changelogs
+
+## 2019.10.18
+
+\[enhancement\] add SEO meta name `author,subtitle`.
+
+## 2019.9.16
+
+\[optimization\] change code style line-height 1.7em.
+
 ## 2019.9.11
 
 \[deprecated\] deprecated variable `theme.language`, which can be instead of `config.language`.

@@ -1,7 +1,13 @@
 <meta charset="UTF-8">
 <meta name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<% if(config.author){ %>
+    <meta name="author" content="<%- config.author %>">
+<% } %>
+<% if(config.subtitle){ %>
+    <meta name="subtitle" content="<%- config.subtitle %>">
+<% } %>
 <% if(config.description){ %>
     <meta name="description" content="<%- config.description %>">
 <% } %>
