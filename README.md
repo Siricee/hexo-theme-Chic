@@ -40,7 +40,7 @@ An elegant,powerful,easy-to-read Hexo theme.
 
 ## Demo
 - [Demo site](https://siricee.github.io/hexo-theme-Chic)
-- [Author's blog](https://siricee.github.io/)
+- <del>[Author's blog](https://siricee.github.io/)</del> (*Not by Hexo currently*.)
 
 ## Features
 - Appropriate blank blocks,elegant but not simple.

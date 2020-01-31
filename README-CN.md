@@ -37,7 +37,7 @@
 
 ## Demo 演示
 - [Demo site](https://siricee.github.io/hexo-theme-Chic)
-- [作者的博客](https://siricee.github.io/)
+- <del>[作者的博客](https://siricee.github.io/)</del> (*不再使用 hexo 驱动*)
 
 ## Features 特点
 - 恰到好处的留白，优雅却不简陋。
