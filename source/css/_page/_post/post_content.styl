@@ -121,6 +121,18 @@
 
   img[data-action="zoom"]
     cursor zoom-in
+  // this element is rendered by hexo.extend.tag.register()
+  // location: scripts/image.js
+  .image-box
+    .image-box-title
+      text-align center
+      font-size .7em
+      margin-top .5em
+      margin-bottom 1em
+      color $light-font-secondary-color
+      .dark-theme &
+        color $dark-font-secondary-color
+  // end element
 
   blockquote
     font-size 1rem
