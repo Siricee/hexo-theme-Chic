@@ -66,7 +66,6 @@
                 <input id="switch_default" type="checkbox" class="switch_default">
                 <label for="switch_default" class="toggleBtn"></label>
             </div>
-
         </div>
     </nav>
 
@@ -257,7 +256,7 @@
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(num1,num2)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> num1+num2;</span><br></pre></td></tr></table></figure>
 
-<!-- Table -->
+<h2 id="Table"><a href="#Table" class="headerlink" title="Table"></a>Table</h2><!-- Table -->
 <table>
 <thead>
 <tr>
@@ -274,11 +273,11 @@
 <td><a href="mailto:mcarter@nowhere.com" target="_blank" rel="noopener">mcarter@nowhere.com</a></td>
 </tr>
 </tbody></table>
-<!-- Autodect -->
+<h2 id="Link-AutoDect"><a href="#Link-AutoDect" class="headerlink" title="Link AutoDect"></a>Link AutoDect</h2><!-- Autodect -->
 <p><a href="https://github.com" target="_blank" rel="noopener">https://github.com</a></p>
 <!-- Below is an example of a link in Markdown coding -->
 <p><a href="http://www.google.com" target="_blank" rel="noopener">google</a></p>
-<!-- Unordered list below. Has to be a space next to the asteriks or a tab!!-->
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><!-- Unordered list below. Has to be a space next to the asteriks or a tab!!-->
 <ul>
 <li>25 bytes</li>
 <li>35 byets</li>
@@ -297,9 +296,22 @@
 <li>Be personable</li>
 <li>Be friendly</li>
 </ol>
-<!-- Image links -->
-<p><img src="http://qzonestyle.gtimg.cn/qzone/qzactStatics/imgs/20171122191630_ff8fef.jpg" alt="Markdown tutorial" title="Pretty"></p>
+<h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><h3 id="Image-in-GFM-without-image-title"><a href="#Image-in-GFM-without-image-title" class="headerlink" title="Image in GFM (without image-title)"></a>Image in GFM (without image-title)</h3><!-- Image links -->
+<p>image import with GFM (Without image-title)</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Markdown tutorial</span>](<span class="link">http://qzonestyle.gtimg.cn/qzone/qzactStatics/imgs/20171122191630_ff8fef.jpg "Pretty"</span>)</span><br></pre></td></tr></table></figure>
 
+<p><img src="http://qzonestyle.gtimg.cn/qzone/qzactStatics/imgs/20171122191630_ff8fef.jpg" alt="Markdown tutorial" title="Pretty"></p>
+<h3 id="Image-in-tag-with-image-title"><a href="#Image-in-tag-with-image-title" class="headerlink" title="Image in tag (with image-title)"></a>Image in tag (with image-title)</h3><!-- <div class="image-box">
+                <img src="[class" alt="names]" title="/path/to/image" class="[width]">
+                <p class="image-box-title">/path/to/image</p>
+            </div>  -->
+<p>hexo tag import image (With image-title) </p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// You can import image in this way to enable image-title.</span><br><span class="line">&#123;% img [class names] /path/to/image [width] [height] '"alt text" "title text"' %&#125;</span><br><span class="line"></span><br><span class="line">// this is a example of image below.</span><br><span class="line">&#123;% img http://qzonestyle.gtimg.cn/qzone/qzactStatics/imgs/20171122191630_ff8fef.jpg "picture 404!" "This is a pic for test"  %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="image-box">
+                <img src="http://qzonestyle.gtimg.cn/qzone/qzactStatics/imgs/20171122191630_ff8fef.jpg" alt="picture 404!" title="This is a pic for test" class>
+                <p class="image-box-title">This is a pic for test</p>
+            </div>
         </div>
 
         
@@ -325,7 +337,7 @@
                 
                      <p class="copyright-item">
                          <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY<strong>?</strong></strong></span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
                      </p>
                 
 

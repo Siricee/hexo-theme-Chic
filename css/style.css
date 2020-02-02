@@ -877,6 +877,16 @@ header label {
 .post-content img[data-action="zoom"] {
   cursor: zoom-in;
 }
+.post-content .image-box .image-box-title {
+  text-align: center;
+  font-size: 0.7em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  color: #a9a9b3;
+}
+.dark-theme .post-content .image-box .image-box-title {
+  color: #87878d;
+}
 .post-content blockquote {
   font-size: 1rem;
   display: block;
@@ -955,6 +965,13 @@ header label {
 .dark-theme .post-content code {
   color: #fffe28;
   background: #787575;
+}
+.post-content h1 code,
+.post-content h2 code,
+.post-content h3 code,
+.post-content h4 code,
+.post-content h5 code {
+  font-size: inherit;
 }
 .post-content figure.highlight {
   margin: 1em 0;
