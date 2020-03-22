@@ -7,11 +7,11 @@
 > Chic,法语词意同'Elegant'
 
 <p align="center">
-<img alt="Author" src="https://img.shields.io/badge/Author-Sirice-blue.svg"/>
-<img alt="node.js" src="https://img.shields.io/badge/node.js-6.0%2B-43853d.svg?style=flat-square"/>
-<img alt="Hexo" src="https://img.shields.io/badge/hexo-3.0+-0e83cd.svg?style=flat-square"/>
-<img alt="Build Status" src="https://img.shields.io/badge/device-responsive-orange.svg"/>
-<img alt="Build Status" src="https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square"/>
+<img alt="Author" src="https://img.shields.io/badge/Author-Sirice-lightgray.svg"/>
+<img alt="Node" src="https://img.shields.io/badge/Node-6.0%2B-43853d.svg"/>
+<img alt="Hexo" src="https://img.shields.io/badge/Hexo-3.0+-0e83cd.svg"/>
+<img alt="Device" src="https://img.shields.io/badge/Device-responsive-orange.svg"/>
+<img alt="Build Status" src="https://img.shields.io/badge/build-passing-brightgreen"/>
 </p>
 
 ## 文档语言
