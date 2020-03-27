@@ -24,31 +24,31 @@ avatar: /image/avatar.jpeg
 ## Unused key can be commented out.
 links:
   Blog: /archives
-#  Category:
-#  Tags: 
-#  Link:
-#  Resume:
-#  Publish:
-#  Trophy:
-#  Gallary:
-#  RSS:
-#  AliPay:
+  # Category:
+  # Tags: 
+  # Link:
+  # Resume:
+  # Publish:
+  # Trophy:
+  # Gallery:
+  # RSS:
+  # AliPay:
   ZhiHu: https://www.zhihu.com/people/sirice
-#  LinkedIn:
-#  FaceBook:
-#  Twitter:
-#  Skype:
-#  CodeSandBox:
-#  CodePen:
-#  Sketch:
-#  Gitlab:
-#  Dribble:
+  # LinkedIn:
+  # FaceBook:
+  # Twitter:
+  # Skype:
+  # CodeSandBox:
+  # CodePen:
+  # Sketch:
+  # Gitlab:
+  # Dribbble:
   Instagram:
   Reddit:
-#  YouTube:
-#  QQ:
-#  Weibo:
-#  WeChat:
+  # YouTube:
+  # QQ:
+  # Weibo:
+  # WeChat:
   Github: https://github.com/Siricee
 
 # how links show: you have 2 choice--text or icon.

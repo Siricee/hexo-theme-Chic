@@ -1,4 +1,8 @@
 Changelogs
+## 2020.3.28
+
+\[fix bugs\] merged PR#68. fix typo in links icon. 
+
 ## 2020.2.2
 
 \[enhancement\] add image-title. 
