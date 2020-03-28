@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Bentham">
+
+
+
+    <meta name="description" content="A pure elegant theme.">
+
+
+    <meta name="keywords" content="Sirice,Chic,Hexo">
+
+
+<title>回顾Chic主题设计 | Hexo</title>
+
+
+
+    <link rel="icon" href="/hexo-theme-Chic/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/hexo-theme-Chic/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/hexo-theme-Chic/js/script.js"></script>
+    
+    <script src="/hexo-theme-Chic/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/hexo-theme-Chic/">Bentham&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/hexo-theme-Chic/archives">Posts</a>
+                
+                    <a class="menu-item" href="/hexo-theme-Chic/category">Categories</a>
+                
+                    <a class="menu-item" href="/hexo-theme-Chic/tag">Tags</a>
+                
+                    <a class="menu-item" href="/hexo-theme-Chic/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/hexo-theme-Chic/">Bentham&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/hexo-theme-Chic/archives">Posts</a>
+                
+                    <a class="menu-item" href="/hexo-theme-Chic/category">Categories</a>
+                
+                    <a class="menu-item" href="/hexo-theme-Chic/tag">Tags</a>
+                
+                    <a class="menu-item" href="/hexo-theme-Chic/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">回顾Chic主题设计</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Bentham</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 5, 2019&nbsp;&nbsp;12:24:14</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/hexo-theme-Chic/categories/Chic-Design/">Chic Design</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>我是作者Sirice。</p>
+<p>距离Chic主题发布已经有一段时间了，目前这个主题我自己觉得效果还算不错。这个项目极具我的个人风格和设计思路，经过了这段时间发布和测试，写下这个文章反思和回顾一下这个设计的优缺点、记录下需要在下阶段完善的方向。</p>
+<p><a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank" rel="noopener"><img src="https://gh-card.dev/repos/Siricee/hexo-theme-Chic.svg?fullname" alt="Siricee/hexo-theme-Chic - GitHub"></a></p>
+<p>我觉得作为前端，除去工程化的产品流程，页面构建应该属于设计类任务，所以我更倾向于称这个过程为“设计”而不是“编程”，因为博客主题是用来方便人的阅读的，<strong>设计的重要性要远大于编程</strong>，良好的阅读体验、美观的视觉效果是主题设计的核心追求。</p>
+<h3 id="纵向比较"><a href="#纵向比较" class="headerlink" title="纵向比较"></a>纵向比较</h3><p>在动手前我看了很多主题和个人博客，参考了hexo、hugo、wordpress主题列表。其中hexo的主题大部分布局都类似，只有样式上的区别，多数没有封面；hugo主题明显灵活许多，可以看出很多有才华有想象力的作品，但限于Golang就没使用hugo；WordPress的主题多数都机具鲜明个性，优美大气，相比hexo明显复杂很多，WP更倾向于personal page，而非blog，hexo重心更倾向于文章阅读。</p>
+<h3 id="页面设计"><a href="#页面设计" class="headerlink" title="页面设计"></a>页面设计</h3><p>想自己写主题的理由就是hexo中主题大部分没有封面，个人觉得博客作为个人主页需要一个封面来引入内容。有封面的主题如我用过的typing、fexo都很不错，typing主题的markdown渲染样式很适合中文但不太适合代码；fexo有点过于简单。而基于go语言的hugo生成器的社区主题的设计感就好很多。本文参考hugo的部分主题设计编写一个hexo主题，使其达到简洁同时典雅大方，阅读体验良好。</p>
+<p>Chic主题完成了这样的任务，我制作了封面作为home page，有头像、昵称、简介、外部链接等，同时参考hugo部分主题设计了两套样式，一键切换light/dark模式。</p>
+<p>文章阅读样式需要考虑易读性、清晰性。我结合读过的版式设计的书籍给出的设计方案是这样：</p>
+<ul>
+<li><p>文章页面以一种淡色为主题色，结合大部分浏览器黑底白字营造出双色阅读的体验；</p>
+</li>
+<li><p>常用四级标题分别加入前缀区分结构；</p>
+</li>
+<li><p>行高设为字符大小2倍可以使行间距更加清晰；</p>
+</li>
+<li><p>代码高亮方案可更换；</p>
+</li>
+<li><p>中英文混合排版，本来有<a href="https://typo.sofi.sh" target="_blank" rel="noopener">typo.css</a>这个中英文混编样式库，但它的字体太纤细了感觉还是不舒服，后更改字体方案，中文字符以Microsoft Jhenghei, Lantinghei SC （微软正黑、方正兰亭）为主要方案，针对苹果显示器使用苹方字体；西文字体选用非衬线体，这样混合排版不会突兀也不会交错，长时间阅读会产生沉浸感且不累眼睛。</p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2019/06/16/5d0632bff213a22169.png" alt="origin.png"></p>
+<center>原始设计稿</center>
+
+<p><img src="https://i.loli.net/2019/06/12/5d006bd289aa325037.png" alt="production.png"></p>
+<center>完成稿</center>
+
+<p><img src="https://i.loli.net/2019/06/12/5d00a0856063661133.png" alt="article.png"></p>
+<center>文章样式</center>
+
+<h3 id="极简主义"><a href="#极简主义" class="headerlink" title="极简主义"></a>极简主义</h3><p>这个风格算是这个作品中从设计到开发一直在践行的风格，也是代表我个人理想主义的存在。这个灵感来源于很久之前读过原研哉讲無印良品的设计理念《设计中的设计》一书。</p>
+<p>页面设计上最大化文章的阅读功能，只保留最重要的部分，没有多余信息干扰阅读。引用的quoteblock使用淡色色块区分，取代第一版设计的大双引号，维持整体低符号化，降低文字敏感度。</p>
+<p>开发角度上也践行极简，博客的所有核心功能不依赖任何第三方资源、全为原生JavaScript，所有代码都来自同源，这样可以保证功能的稳定和页面加载时的速度。</p>
+<p>我认为这个设计的优点在于：简洁；突出重点；加载速度快 为内容而生。</p>
+<p>但极简主义不足也同样明显：缺少鲜明个性；而与欧美的极简主义印象派相比也缺少直击灵魂的东西，想做成极简杂志风格也没有特别贴近。</p>
+<p>因此未来当我接触到更多类似设计实例时会思考如何改进本主题的设计使其在原有风格基础上体验更加舒适。</p>
+<h3 id="平衡"><a href="#平衡" class="headerlink" title="平衡"></a>平衡</h3><p>设计的四大原则之一对齐。本主题将能看到的内容尽量以两端对齐和居中方式处理，视觉焦点居中于页面，这样在阅读时不会有一个方向的偏移感。这个设计就是想改正Next主题因为导航栏的存在导致文章整体左偏或右偏的问题。</p>
+<h3 id="奥卡姆剃刀原则"><a href="#奥卡姆剃刀原则" class="headerlink" title="奥卡姆剃刀原则"></a>奥卡姆剃刀原则</h3><blockquote>
+<p><em>如无必要 勿增实体</em></p>
+</blockquote>
+<p>“主题的原型功能非常简单，甚至相比于其他主题来说少了很多功能”。这是主题发布后从来往的邮件中获得的反馈。Issue中也有添加评论模块、添加Google Analyze、百度统计的类似求助。在这些邮件和Issue中我都给出了解决办法，但我没有合并任何功能到主题项目中。</p>
+<p>我认为这些评论模块、页面分析模块、打赏等都是博客系统的<strong>非必要功能</strong>，博客应该为内容而生。一方面对于大部分独立博客来说，这些功能即使安装了其实也发挥不了什么作用，以绝大部分独立博客的访问量和模块的使用率根本没必要安装。另一方面，如果有需要这些功能的，CSDN、简书、掘金、博客园不都是极好的平台，何必自己造个轮子。</p>
+<p>另外一个方面是代码高亮，hexo内置了highlightJs进行高亮语义化标签，很多其他主题停用了hexo的内置库而单独引用高亮插件。这里我仍使用了原来的方案，加以多种高亮样式表辅助，避免同一个资源加载两次。</p>
+<p>因此我一直坚持项目主体对这些功能的剥离，坚持专注于内容。但对有需要的人我并不反对使用，同时会给需要的用户加以指导。</p>
+<h3 id="绝不会让设计为功能让步"><a href="#绝不会让设计为功能让步" class="headerlink" title="绝不会让设计为功能让步"></a>绝不会让设计为功能让步</h3><p>2019年我们见到了太多妥协的设计，以手机产品来说，去除3.5mm耳机孔增加电池空间、前置摄像头而对屏幕挖洞、刘海屏，这都是为功能让步的设计，在我看来都是失败的设计。</p>
+<p>在我的博客主题中，我也会<strong>永远坚持这个设计原则</strong>，绝不会让设计为功能让步。</p>
+<p>有个Issue是说category页面不能显示过长的文字标题而想添加滚动条，但这个修改方式我认为不是完美的解决方案。</p>
+<p><em>因为从视觉设计上来说，如果加入滚动条：在所有category和标题都超出长度的情况下，全部触发滚动，会造成页面整体非常不稳定的感觉（到处都在滑），而这个页面的视觉焦点集中在中央分类块上，这个不稳定感可能会明显造成不适，难以集中注意力；而在多组分类块只有一个超出长度触发了滚动条的情况下，这个带滚动条的块又会造成版式不对称、破坏页面风格的一致性。</em></p>
+<p>因此这个解决方案仍有待商榷，暂时不会加入代码库中。</p>
+<h3 id="国际化"><a href="#国际化" class="headerlink" title="国际化"></a>国际化</h3><p>这个主题在1.x版本没有支持国际化，我之前在想要不要支持这个功能，但经过深入了解国际化方案后我觉得这个功能做出来会引起非常多的使用上的不便，比如导航栏添加标题要到国际化语言包中添加关键词，在说明文档中可能也讲不明白，还会造成一种“我就是想添加一个导航为什么这么复杂”的困惑，因此未来更新中暂时不会加入这个功能，直接在config中添加字段就行了，既方便又不会造成困惑。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>在用户能接触到的产品中，设计的作用和要考虑的方面要远大于开发，因此我相信开发中的问题本质都是设计的不完善。</p>
+<p>现阶段主题在1.x版本中就是这样，应该不会有太大改动，但细节上的优化会持续进行。我会思考在未来版本中如何设计会更加易用。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Bentham</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://siricee.github.io/hexo-theme-Chic/2019/06/05/backreview_hexo_theme_Chic/">https://siricee.github.io/hexo-theme-Chic/2019/06/05/backreview_hexo_theme_Chic/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/hexo-theme-Chic/tags/Chic/"># Chic</a>
+                    
+                        <a href="/hexo-theme-Chic/tags/UED/"># UED</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/hexo-theme-Chic/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/hexo-theme-Chic/2019/06/11/markdown_test/">Markdown Test</a>
+            
+            
+            <a class="next" rel="next" href="/hexo-theme-Chic/2019/06/05/zh-CN/">中文测试</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Bentham | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
