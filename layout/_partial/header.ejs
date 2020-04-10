@@ -6,6 +6,7 @@
                 <% for (var i in theme.nav){ %>
                     <a class="menu-item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
                 <% } %>
+                <a href="<%- config.root %>search/">搜索</a>
                 <input id="switch_default" type="checkbox" class="switch_default">
                 <label for="switch_default" class="toggleBtn"></label>
             </div>
@@ -17,9 +18,9 @@
         <div class="container">
             <div class="navbar-header">
                 <div>
-                    <a href="<%- config.root %>"><%= theme.navname %></a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                    <a href="<%- config.root %>"><%= theme.navname %></a><a id="mobile-toggle-theme">·&nbsp;日间</a>
                 </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; 选项</div>
             </div>
             <div class="menu" id="mobile-menu">
                 <% for (var i in theme.nav){ %>

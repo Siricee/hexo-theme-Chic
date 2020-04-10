@@ -7,11 +7,11 @@
 > Chic ,French word means 'Elegant' in English.
 
 <p align="center">
-<img alt="Author" src="https://img.shields.io/badge/Author-Sirice-lightgray.svg"/>
-<img alt="Node" src="https://img.shields.io/badge/Node-6.0%2B-43853d.svg"/>
-<img alt="Hexo" src="https://img.shields.io/badge/Hexo-3.0+-0e83cd.svg"/>
-<img alt="Device" src="https://img.shields.io/badge/Device-responsive-orange.svg"/>
-<img alt="Build Status" src="https://img.shields.io/badge/build-passing-brightgreen"/>
+<img alt="Author" src="https://img.shields.io/badge/Author-Sirice-blue.svg"/>
+<img alt="node.js" src="https://img.shields.io/badge/node.js-6.0%2B-43853d.svg?style=flat-square"/>
+<img alt="Hexo" src="https://img.shields.io/badge/hexo-3.0+-0e83cd.svg?style=flat-square"/>
+<img alt="Build Status" src="https://img.shields.io/badge/device-responsive-orange.svg"/>
+<img alt="Build Status" src="https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square"/>
 </p>
 
 ## Doc language
@@ -29,7 +29,6 @@
 - [Configuration](#configuration)
   - [Add 'Tag','Category' Page](#add-tagcategory-page)
   - [MathJax (Render LaTeX Formula)](#mathjax-render-latex-formula)
-  - [Image-title](#image-title)
 - [Customize](#customize)
 - [FAQ](#faq)
 - [Gallary](#gallary)
@@ -41,7 +40,7 @@ An elegant,powerful,easy-to-read Hexo theme.
 
 ## Demo
 - [Demo site](https://siricee.github.io/hexo-theme-Chic)
-- <del>[Author's blog](https://siricee.github.io/)</del> (*Not by Hexo currently*.)
+- [Author's blog](https://siricee.github.io/)
 
 ## Features
 - Appropriate blank blocks,elegant but not simple.
@@ -230,25 +229,8 @@ mathjax:
     ```
 LaTeX grammers will not be illustrated in this doc. In Chic theme, Single '$' rounded statement is regarded as inline formula like `$f(x)=ax+b$` ; Double '$' rounded statement is regarded as block formula like `$$f(x)=ax+b$$`.More information please read LaTeX doc and [Formula test page in Demo Site](https://siricee.github.io/hexo-theme-Chic/2019/07/05/MathJax_test/).
 
-### Image-title
 
-You have 2 method to import image in your post:
- 
- - image import with GFM (Without image-title)
-   ```
-   ![pic](picUrl)
-   ```
- - hexo built-in image tag (With image-title)
-   ```
-   {% img [class names] /path/to/image [width] [height] '"alt text" "title text"' %}
-   ```
-So if you want to import as fast as possible, you can use GFM，and this way will also get best adaptability. 
 
-**If you want to display image-title, you should use hexo built-in image tag.**
-- `"alt text"` is used when image not load or something wrong in that image 404.
-- `"title text"` **will be displayed below the image.**
-
-You can preview image-title and sample code in [Demo site](https://siricee.github.io/hexo-theme-Chic/2019/06/05/markdown_test/#Image)
 
 ## Customize
 

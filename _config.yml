@@ -1,22 +1,22 @@
 # Header
-navname: Bentham's Blog
+navname: 博客
 
 # navigatior items
 nav:
-  Posts: /archives
-  Categories: /category
-  Tags: /tag
-  About: /about
+  文章: /archives
+  分类: /category
+  标签: /tag
+  关于: /about
 
 # favicon
 favicon: /favicon.ico
 
 # Profile
-nickname: Jeremy Bentham
+nickname: 乾坤多畏途 何处无波澜
 
 ### this variable is MarkDown form.
-description: Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** <br>Fusce eget urna vitae velit *eleifend interdum at ac* nisi.
-avatar: /image/avatar.jpeg
+description: 《翌日湖中风雪转甚》
+avatar: /image/avatar.jpg
 
 # main menu navigation
 ## links key words should not be changed.
@@ -24,32 +24,32 @@ avatar: /image/avatar.jpeg
 ## Unused key can be commented out.
 links:
   Blog: /archives
-  # Category:
-  # Tags: 
-  # Link:
-  # Resume:
-  # Publish:
-  # Trophy:
-  # Gallery:
-  # RSS:
-  # AliPay:
-  ZhiHu: https://www.zhihu.com/people/sirice
-  # LinkedIn:
-  # FaceBook:
-  # Twitter:
-  # Skype:
-  # CodeSandBox:
-  # CodePen:
-  # Sketch:
-  # Gitlab:
-  # Dribbble:
-  Instagram:
-  Reddit:
-  # YouTube:
-  # QQ:
-  # Weibo:
-  # WeChat:
-  Github: https://github.com/Siricee
+#  Category:
+#  Tags: 
+#  Link:
+#  Resume:
+#  Publish:
+#  Trophy:
+#  Gallary:
+#  RSS:
+#  AliPay:
+#  ZhiHu: https://www.zhihu.com/people/sirice
+#  LinkedIn:
+#  FaceBook:
+#  Twitter:
+#  Skype:
+#  CodeSandBox:
+#  CodePen:
+#  Sketch:
+#  Gitlab:
+#  Dribble:
+# Instagram:
+# Reddit:
+#  YouTube:
+#  QQ:
+#  Weibo:
+#  WeChat:
+  Github: https://github.com/zgsxxzzyl
 
 # how links show: you have 2 choice--text or icon.
 links_text_enable: false
@@ -63,14 +63,14 @@ post_author_enable: true
 post_date_enable: true
 post_category_enable: true
 ## Post copyright
-post_copyright_enable: true
+post_copyright_enable: false
 
 post_copyright_author_enable: true
 post_copyright_permalink_enable: true
 post_copyright_license_enable: true
 post_copyright_license_text: Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
 post_copyright_slogan_enable: true
-post_copyright_slogan_text: Do you believe in <strong>DESTINY</strong>?
+post_copyright_slogan_text: Do you believe in <strong>DESTINY<strong>?
 ## toc
 post_toc_enable: true
 
@@ -101,6 +101,17 @@ scripts:
 ## https://www.mathjax.org
 mathjax:
   enable: true
-  import: demand # global or demand
+  import: global # global or demand
   ## global: all pages will load mathjax,this will degrade performance and some grammers may be parsed wrong.
   ## demand: Recommend option,if your post need fomula, you can declare 'mathjax: true' in Front-matter
+  
+  
+# Local search
+# Dependencies: https://github.com/flashlab/hexo-generator-search
+local_search:
+  enable: false
+  # if auto, trigger search by changing input
+  # if manual, trigger search by pressing enter key or search button
+  trigger: auto
+  # show top n results per article, show all results by setting to -1
+  top_n_per_article: 2

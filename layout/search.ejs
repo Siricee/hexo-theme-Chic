@@ -1,0 +1,35 @@
+
+<div id="site_search">
+  <div class="form-group">
+  <input type="text" id="local-search-input" name="q" results="0" placeholder="<%= __('search') %>" class="st-search-input st-default-search-input form-control"/>
+  </div>  
+<div id="local-search-result"></div>
+</div>
+<script src="<%- config.root %>js/jquery-3.4.1.min.js"></script> 
+<script src="<%- config.root %>js/search.js"></script> 
+<% if (config.search) { %>
+  <script type="text/javascript">      
+    var search_path = "<%= config.search.path %>";
+  if (search_path.length == 0) {
+    search_path = "search.xml";
+  }
+  var path = "<%= config.root %>" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+<% } %>
+
+
+<!-- <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input 
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+<script src="<%- config.root %>js/search_ext.js"></script>  -->

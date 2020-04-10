@@ -7,11 +7,11 @@
 > Chic,法语词意同'Elegant'
 
 <p align="center">
-<img alt="Author" src="https://img.shields.io/badge/Author-Sirice-lightgray.svg"/>
-<img alt="Node" src="https://img.shields.io/badge/Node-6.0%2B-43853d.svg"/>
-<img alt="Hexo" src="https://img.shields.io/badge/Hexo-3.0+-0e83cd.svg"/>
-<img alt="Device" src="https://img.shields.io/badge/Device-responsive-orange.svg"/>
-<img alt="Build Status" src="https://img.shields.io/badge/build-passing-brightgreen"/>
+<img alt="Author" src="https://img.shields.io/badge/Author-Sirice-blue.svg"/>
+<img alt="node.js" src="https://img.shields.io/badge/node.js-6.0%2B-43853d.svg?style=flat-square"/>
+<img alt="Hexo" src="https://img.shields.io/badge/hexo-3.0+-0e83cd.svg?style=flat-square"/>
+<img alt="Build Status" src="https://img.shields.io/badge/device-responsive-orange.svg"/>
+<img alt="Build Status" src="https://img.shields.io/travis/viosey/hexo-theme-material.svg?style=flat-square"/>
 </p>
 
 ## 文档语言
@@ -37,7 +37,7 @@
 
 ## Demo 演示
 - [Demo site](https://siricee.github.io/hexo-theme-Chic)
-- <del>[作者的博客](https://siricee.github.io/)</del> (*不再使用 hexo 驱动*)
+- [作者的博客](https://siricee.github.io/)
 
 ## Features 特点
 - 恰到好处的留白，优雅却不简陋。
@@ -220,25 +220,6 @@ mathjax:
     ```
 LaTeX语法这里不做解释，本主题中，单dollar符号包围的为行内公式，例：`$f(x)=ax+b$`，双dollar符号包围的为块公式，例`$$f(x)=ax+b$$`更多写法请参考LaTeX和[Demo site中的公式测试页面](https://siricee.github.io/hexo-theme-Chic/2019/07/05/MathJax_test/)。
 
-### 图片标题
-
-在Hexo中，你有两种方式引入图片：
-
-  - GFM 语法直接引入（不显示图片标题）
-    ```
-    ![pic](picUrl)
-    ```
-  - Hexo 内置标签系统-图片标签（显示图片标题）
-    ```
-    {% img [class names] /path/to/image [width] [height] '"alt text" "title text"' %}
-    ```
-所以如果你仅仅想方便快捷引入图片，那你应该使用 GFM 语法，这种方式也是兼容性最好的方案。
-
-但如果你需要显示**图片标题**，你就应该使用第二种方案，**图片标签方式**。
-- `"alt text"`用来显示当图片加载失败时垫底的提示文字。
-- `"title text"`将会被显示到图片下方作为图片标题。
-
-你可以在 [Demo site](https://siricee.github.io/hexo-theme-Chic/2019/06/05/markdown_test/#Image) 中查看图片标题的效果和示例语法。
 
 ## Customize 自定义
 - 代码高亮风格 在`hexo-theme-Chic\themes\Chic\source\css\style.styl`中更改highlight为`_highlight`文件夹中的stylus文件即可更换代码高亮风格。
