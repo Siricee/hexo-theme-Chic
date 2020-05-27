@@ -14,7 +14,7 @@
 <img alt="Build Status" src="https://img.shields.io/badge/build-passing-brightgreen"/>
 </p>
 
-## Doc language
+## Documentation language
 
 - [中文文档](README-CN.md)
 - [English](README.md)
