@@ -20,7 +20,7 @@
 - [English](README.md)
 
 ## Contents
-- [Doc language](#doc-language)
+- [Documentation language](#documentation-language)
 - [Contents](#contents)
 - [Introduction](#introduction)
 - [Demo](#demo)
