@@ -4,7 +4,7 @@
 <img src="https://i.loli.net/2019/06/12/5d006bd289aa325037.png" alt="Chic theme">
 </p>
 
-> Chic ,French word means 'Elegant' in English.
+> Chic, French word meaning 'Elegant' in English.
 
 <p align="center">
 <img alt="Author" src="https://img.shields.io/badge/Author-Sirice-lightgray.svg"/>
@@ -27,7 +27,7 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Configuration](#configuration)
-  - [Add 'Tag','Category' Page](#add-tagcategory-page)
+  - [Add 'Tag', 'Category' Page](#add-tagcategory-page)
   - [MathJax (Render LaTeX Formula)](#mathjax-render-latex-formula)
   - [Image-title](#image-title)
 - [Customize](#customize)
@@ -37,36 +37,36 @@
 
 
 ## Introduction
-An elegant,powerful,easy-to-read Hexo theme.
+An elegant, powerful, easy-to-read Hexo theme.
 
 ## Demo
 - [Demo site](https://siricee.github.io/hexo-theme-Chic)
-- <del>[Author's blog](https://siricee.github.io/)</del> (*Not by Hexo currently*.)
+- <del>[Author's blog](https://siricee.github.io/)</del> (*Not using Hexo currently*)
 
 ## Features
-- Appropriate blank blocks,elegant but not simple.
+- Appropriate blank blocks, elegant but not simple.
 
-- Light/Dark theme，just one click.
+- Light/Dark theme, just one click.
 
 - Abundant highlight mode.
 
-- elaborately selected fonts,best reading experience. \* *'Microsoft Jhenghei' especially recommended.*
+- Elaborately selected fonts, best reading experience. *'Microsoft Jhenghei' especially recommended.*
 
 - Auto fit Mobile and Screen responsively.
 
-- Support MathJax,Support Formula written in LaTeX.
+- Support MathJax, support formula written in LaTeX.
 
 ## Installation
 
 ```bash
 cd your-blog/themes
 git clone https://github.com/Siricee/hexo-theme-Chic.git Chic
-// Modify theme setting in _config.yml to Chic.
+# Modify theme setting in _config.yml to Chic.
 ```
 
 ## Configuration
 <details>
-<summary><mark>click here to spread</mark></summary>
+<summary><mark>Click here to spread</mark></summary>
 
 ```yaml
 # Header
@@ -179,11 +179,11 @@ mathjax:
 </details>
 <br>
 
-### Add 'Tag','Category' Page
+### Add 'Tag', 'Category' Page
 
-There is no 'tag' or 'category' page in initialized site. If you need it, please follow the steps below.
+There is no 'tag' or 'category' page in the site as it initializes. If you need it, please follow the steps below.
 
-1. execute command
+1. execute commands
 ```bash
 hexo new page tag
 hexo new page category
@@ -200,11 +200,11 @@ title: Tag
 layout: tag
 ---
 ```
-4. So do the category page.please set keyword 'layout' category.
+4. Do so with the category page with `Category` as title and `category` as layout.
 
-### MathJax (Render LaTeX Formula)
+### MathJax (Render LaTeX formula)
 
-Related config file（`Chic/_config.yml`）：
+Related config file (`Chic/_config.yml`):
 ```yaml
 # plugin functions
 ## Mathjax: Math Formula Support
@@ -215,60 +215,60 @@ mathjax:
   ## global: all pages will load mathjax,this will degrade performance and some grammers may be parsed wrong.
   ## demand: if your post need fomula, you can declare 'mathjax: true' in Front-matter
 ```
-`mathjax` has keywords below：
-- `enable`: value`true` enable mathjax(default set `true`); value`false` disable.
-- `import`:this key sets mathjax load method，option could be `global` or `demand`.
-  - `global`：global import，all pages will load script.It's convenient，but **it may cause some MarkDown grammers parsed wrong**.for example, consecutive `$$` will be rendered as a formula；Besides,global import will waste performance in pages without any formula.
-  - `demand`【Recommended】：import mathjax when you need.After you set this value，if you need use formula,just declare it in post Front-matter.Here is an example below.
+`mathjax` uses the keywords below:
+- `enable`: value `true` enables mathjax (default value `true`); value `false` disables it.
+- `import`: this key sets mathjax load method, options can be `global` or `demand`.
+  - `global`: global import, all pages will load script. It's convenient, but **it may cause some MarkDown grammars to be parsed wrong**. For example, consecutive `$$` will be rendered as a formula; Besides, global import will waste performance in pages without any formula.
+  - `demand`: [Recommended] Import mathjax when you need it. After you set this value, if you need to use formula, just declare it in the post Front-matter. Here is an example:
     ```yaml
     ---
     title: MathJax Test
     date: 2019-07-05 21:27:59
     tags:
-    mathjax: true # add this statement,MathJax will enable in this post.
+    mathjax: true # add this statement, MathJax will be enabled in this post.
     ---
     ```
-LaTeX grammers will not be illustrated in this doc. In Chic theme, Single '$' rounded statement is regarded as inline formula like `$f(x)=ax+b$` ; Double '$' rounded statement is regarded as block formula like `$$f(x)=ax+b$$`.More information please read LaTeX doc and [Formula test page in Demo Site](https://siricee.github.io/hexo-theme-Chic/2019/07/05/MathJax_test/).
+LaTeX grammars will not be illustrated in this doc. In Chic theme, single '$' rounded statement is regarded as inline formula like `$f(x)=ax+b$`; double '$' rounded statement is regarded as block formula like `$$f(x)=ax+b$$`. More information please read LaTeX doc and [Formula test page in Demo Site](https://siricee.github.io/hexo-theme-Chic/2019/07/05/MathJax_test/).
 
 ### Image-title
 
-You have 2 method to import image in your post:
+You have 2 methods to import images in your posts:
  
- - image import with GFM (Without image-title)
+ - image import with GFM (without image-title)
    ```
    ![pic](picUrl)
    ```
- - hexo built-in image tag (With image-title)
+ - hexo built-in image tag (with image-title)
    ```
    {% img [class names] /path/to/image [width] [height] '"alt text" "title text"' %}
    ```
-So if you want to import as fast as possible, you can use GFM，and this way will also get best adaptability. 
+So if you want to import as fast as possible, you can use GFM, and this way will also get the best adaptability. 
 
 **If you want to display image-title, you should use hexo built-in image tag.**
-- `"alt text"` is used when image not load or something wrong in that image 404.
+- `"alt text"` is used when the image doesn't load or something went wrong in that image (404).
 - `"title text"` **will be displayed below the image.**
 
 You can preview image-title and sample code in [Demo site](https://siricee.github.io/hexo-theme-Chic/2019/06/05/markdown_test/#Image)
 
 ## Customize
 
-- Highlight Style： Enter `hexo-theme-Chic\themes\Chic\source\css\style.styl` change stylesheet with key word `_highlight` in link in `_highlight` dictionary.
+- Highlight Style: Enter `hexo-theme-Chic\themes\Chic\source\css\style.styl` change stylesheet with key word `_highlight` in link in `_highlight` dictionary.
 
-- Customize stylesheets in path below.(stylus）
+- Customize stylesheets in this [stylus](https://stylus-lang.com/) file:
 
    `hexo-theme-Chic\themes\Chic\source\css\custom.styl`
 
-- Customize javascripts in dictionary below.
+- Customize javascripts in the dictionary:
 
   `hexo-theme-Chic\themes\Chic\source\js`
 
-  Then add declareation in _config.yml key word 'script'
+  Then add declaration in `_config.yml`using the keyword 'script'.
 
 ## FAQ
 
-1. I deployed my site on second-level url(such as username.github.io/Blog), why my css,avatar and other sources  missed(404 error)?
+1. I deployed my site on a second-level url (such as username.github.io/blog), and my css, avatar and other sources are missing (404 error)
 
-    Answer: You need change some URLs in root config url keyword. For instance:
+    Answer: You need to change some URLs in root config keyword. For instance:
     ```yaml
     # (blog/_config.yml)
 
@@ -280,9 +280,9 @@ You can preview image-title and sample code in [Demo site](https://siricee.githu
     permalink_defaults:
     ```
 
-2. How to set the dark theme as default theme for whole site automatically?
+2. How to set the dark theme as default for whole site automatically?
    
-   Answer: You need to change some codes in `themes\Chic\source\js\script.js`, function `doucument.ready` as below.
+   Answer: You need to change some code in `themes\Chic\source\js\script.js`, function `doucument.ready` as shown below.
    ```javascript
    document.ready(
     function () {
@@ -293,9 +293,9 @@ You can preview image-title and sample code in [Demo site](https://siricee.githu
    ```
    Now, you have already set the dark theme as default successfully.
 
-3. More questions will be added later...
+3. More questions will be added...
 
-## Gallary
+## Gallery
 ![screely-1560228577821.png](https://i.loli.net/2019/06/12/5d00a0850285252790.png)
 ![screely-1560228791041.png](https://i.loli.net/2019/06/12/5d00a0856063661133.png)
 ![screely-1560228621288.png](https://i.loli.net/2019/06/12/5d00a084e29cd40271.png)
