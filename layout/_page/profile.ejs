@@ -1,7 +1,11 @@
 <div class="container">
     <div class="intro">
         <div class="avatar">
-            <a href="<%- url_for(theme.nav.Posts) %>"><img src="<%- url_for(theme.avatar) %>"></a>
+            <% if (theme.avatar.gravatar && theme.avatar.gravatar.enable && theme.avatar.gravatar.email) { %>
+				<a href="<%- url_for(theme.nav.Posts) %>"><img src="<%= gravatar(theme.avatar.gravatar.email) %>"></a>
+            <% } else { %>
+				<a href="<%- url_for(theme.nav.Posts) %>"><img src="<%- url_for(theme.avatar.url) %>"></a>
+            <% } %>
         </div>
         <div class="nickname"><%- theme.nickname %></div>
         <div class="description"><%- markdown(theme.description) %></div>
