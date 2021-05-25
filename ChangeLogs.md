@@ -1,4 +1,8 @@
 Changelogs
+## 2021.5.25
+
+\[fix bugs\] fixed issue#98. add rules of scrollbar in body.
+
 ## 2020.3.28
 
 \[fix bugs\] merged PR#68. fix typo in links icon. 
