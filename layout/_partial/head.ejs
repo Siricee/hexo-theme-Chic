@@ -63,3 +63,14 @@ if (is_archive()){
         <% } %>
     <% } %>
 <% } %>
+<%# google analytics support %>
+<% if (theme.google_analytics.tracking_id != null ){ %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.google_analytics.tracking_id %>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', theme.google_analytics.tracking_id);
+    </script>
+<% } %>
