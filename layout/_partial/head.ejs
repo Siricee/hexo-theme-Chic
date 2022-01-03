@@ -71,6 +71,6 @@ if (is_archive()){
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', theme.google_analytics.tracking_id);
+        gtag('config', '<%- theme.google_analytics.tracking_id %>');
     </script>
 <% } %>
