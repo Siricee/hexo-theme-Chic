@@ -10,7 +10,7 @@
 
 <script>
     var tocbot_timer;
-    var DEPTH_MAX = 6;    // 为 6 时展开所有
+    var DEPTH_MAX = 6; // 为 6 时展开所有
     var tocbot_default_config = {
         tocSelector: '.tocbot-list',
         contentSelector: '.post-content',
@@ -22,20 +22,26 @@
 
     function extend_click() {
         clearTimeout(tocbot_timer);
-        tocbot_timer = setTimeout(function () {
-            tocbot.refresh(obj_merge(tocbot_default_config, { hasInnerContainers: true }));
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
         }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
     }
 
-    document.ready(function () {
-        tocbot.init(obj_merge(tocbot_default_config, { collapseDepth: 1 }));
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
     });
 
-    function expandToc() {
+    function expand_toc() {
         var b = document.querySelector('.tocbot-toc-expand');
         var expanded = b.getAttribute('data-expanded');
         expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
-        tocbot.refresh(obj_merge(tocbot_default_config, { collapseDepth: expanded ? 1 : DEPTH_MAX }));
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
         b.innerText = expanded ? 'Expand all' : 'Collapse all';
     }
 
