@@ -44,7 +44,7 @@ document.ready(
         } else {
             document.getElementById("switch_default").checked = false;
             // mobile
-            document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            document.getElementById("mobile-toggle-theme").innerText = "· Light"
         }
         _Blog.toggleTheme = function () {
             if (isDark) {
