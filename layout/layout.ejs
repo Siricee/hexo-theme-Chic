@@ -6,6 +6,17 @@
 </head>
 
 <body>
+    <script src="<%- config.root %>js/jquery-2.0.3.min.js"></script>
+    <%- js('js/search.js') %>
+    <script type="text/javascript">
+        var search_path = "<%= config.search.path %>";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+        var path = "<%= config.root %>" + search_path;
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        click_time=0;
+    </script>
     <script>
         // this function is used to check current theme before page loaded.
         (() => {
@@ -26,10 +37,11 @@
 
     <div class="wrapper">
         <%- partial('_partial/header',{cache: true}) %>
-            <div class="main">
-                <%- body %>
-            </div>
-            <%- partial('_partial/footer',{cache: true}) %>
+        <div class="main">
+            <%- partial('_partial/search',{cache: true}) %>
+            <%- body %>
+        </div>
+        <%- partial('_partial/footer',{cache: true}) %>
     </div>
 </body>
 
