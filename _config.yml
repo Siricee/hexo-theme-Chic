@@ -24,8 +24,8 @@ avatar: https://pic.cosec.moe/avatar.webp
 ## Unused key can be commented out.
 links:
   Blog: /archives
-  # Category:
-  # Tags: 
+  Category: /category
+  Tags: /tag
   # Link:
   # Resume:
   # Publish:
@@ -87,6 +87,7 @@ time_format: H:mm:ss
 # stylesheets loaded in the <head>
 stylesheets:
   - /css/style.css
+  - https://testingcf.jsdelivr.net/npm/@waline/client/dist/waline.css
 
 # scripts loaded in the end of the body
 scripts:
