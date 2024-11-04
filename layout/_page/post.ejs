@@ -81,6 +81,50 @@
                 <a href="<%- config.root %>">home</a>
             </div>
         </section>
+        <div id="waline"></div>
+        <script type="module">
+            import { init } from 'https://testingcf.jsdelivr.net/npm/@waline/client/dist/waline.js';
+
+            init({
+                el: '#waline',
+                serverURL: 'https://waline.guanjigj.green',
+                emoji: [
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-emoji',
+                    'https://unpkg.com/@waline/emojis@1.2.0/qq',
+                    'https://unpkg.com/@waline/emojis@1.2.0/alus',
+                    'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
+                    'https://unpkg.com/@waline/emojis@1.2.0/bmoji',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tieba',
+                    'https://unpkg.com/@waline/emojis@1.2.0/weibo',
+                    'https://unpkg.com/@waline/emojis@1.2.0/soul-emoji',
+
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-body',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-food',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-natural',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-object',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-symbol',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-people',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-sport',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-time',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-travel',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-weather',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw-flag'
+                ],
+                reaction: [
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw/1f44d.png',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw/1f44e.png',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw/1f604.png',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw/1f973.png',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw/1f389.png',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw/1f615.png',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw/2665.png',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw/1f680.png',
+                    'https://unpkg.com/@waline/emojis@1.2.0/tw/1f440.png'
+                ],
+                pageview: true,
+                comment: true
+                });
+        </script>
         <section class="post-nav">
             <% if(post.prev){ %>
                 <a class="prev" rel="prev" href="<%- url_for(post.prev.path)%>"><%- post.prev.title%></a>
@@ -89,7 +133,5 @@
             <a class="next" rel="next" href="<%- url_for(post.next.path)%>"><%- post.next.title%></a>
             <% } %>
         </section>
-
-
     </article>
 </div>

@@ -35,7 +35,7 @@ if (is_archive()){
 
 <%# favicon %>
 <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- url_for(theme.favicon) %>">
+    <link rel="icon" href="<%- url_for(theme.favicon) %>" type="image/svg+xml" />
 <% } %>
 
 <%# css list %>
@@ -63,3 +63,6 @@ if (is_archive()){
         <% } %>
     <% } %>
 <% } %>
+
+<!-- Waline -->
+<link rel="stylesheet" href="https://testingcf.jsdelivr.net/npm/@waline/client/dist/waline.css">
