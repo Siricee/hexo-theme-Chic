@@ -14,13 +14,14 @@
     &:hover 
       color: $light-global-link-hover-color
       transform: scale(1.1)
-      @media (prefers-color-scheme: dark)
-        color: $dark-global-link-hover-color
     small
       margin 0 .3em
       color: $light-font-secondary-color
-      @media (prefers-color-scheme: dark)
+  @media (prefers-color-scheme: dark)
+    a
+      &:active,
+      &:focus,
+      &:hover 
         color: $dark-global-link-hover-color
-
-
-
+      small
+        color: $dark-global-link-hover-color

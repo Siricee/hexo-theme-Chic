@@ -17,21 +17,21 @@
     &:hover
       color $light-global-link-hover-color
       background-color transparent
-    
-    @media (prefers-color-scheme: dark)
-      color $dark-global-link-color
-      text-decoration none
-      transition color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease
-
-      &:hover
-        color $dark-global-link-hover-color
-        text-decoration none
-        transition color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease
 
   .archive-item-date
     float right
     text-align right
     color $light-font-secondary-color
 
-    @media (prefers-color-scheme: dark)
-      color $dark-font-secondary-color
+@media (prefers-color-scheme: dark)
+  .archive-item-link
+    color $dark-global-link-color
+    transition color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease
+
+    &:hover
+      color $dark-global-link-hover-color
+      text-decoration none
+      transition color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease
+
+  .archive-item-date
+    color $dark-font-secondary-color
