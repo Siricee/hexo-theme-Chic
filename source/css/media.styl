@@ -5,7 +5,6 @@
   .navbar
     display: none
 
-
   .navbar-mobile 
     display: block !important
     position: fixed
@@ -29,7 +28,6 @@
         box-sizing: border-box
         position relative
 
-
         .menu-toggle 
           cursor: pointer
           line-height: 5.5em
@@ -47,17 +45,11 @@
             -moz-transition: .25s margin .25s, .25s transform
             transition: .25s margin .25s, .25s transform
 
-            .dark-theme & 
-              background: $dark-font-color
-            
-          
-
           span:nth-child(1) 
             margin-bottom: 8px
           
           span:nth-child(3) 
             margin-top: 8px
-          
 
           &.active 
             span 
@@ -70,21 +62,15 @@
               -ms-transform: rotate(45deg) translate(4px, 6px)
               -webkit-transform: rotate(45deg) translate(4px, 6px)
               transform: rotate(45deg) translate(4px, 6px)
-            
 
             span:nth-child(2) 
               opacity: 0
-            
 
             span:nth-child(3) 
               -moz-transform: rotate(-45deg) translate(8px, -10px)
               -ms-transform: rotate(-45deg) translate(8px, -10px)
               -webkit-transform: rotate(-45deg) translate(8px, -10px)
               transform: rotate(-45deg) translate(8px, -10px)
-            
-          
-        
-      
 
       .menu 
         text-align: center
@@ -102,7 +88,6 @@
           margin 0 1em
 
           line-height: 2.5em
-        
 
         &.active 
           display: block
@@ -111,23 +96,11 @@
           box-sizing border-box
           overflow-x auto
 
-        .dark-theme & 
-          background: $dark-background-color
-          border-top: 2px solid $dark-font-secondary-color
-        
-      
-      .dark-theme & 
-        background: $dark-background-color !important
-      
-    
-  
-
   .archive
     width 90%
     & .archive-item
       .archive-item-date
         display none
-
 
   #dynamic-to-top 
     display: none !important
@@ -153,19 +126,27 @@
         .categories
           overflow: hidden
 
+  @media (prefers-color-scheme: dark)
+    .navbar-mobile .container .menu-toggle span
+      background: $dark-font-color
+
+    .navbar-mobile .container .menu
+      background: $dark-background-color
+      border-top: 2px solid $dark-font-secondary-color
+
+    .navbar-mobile .container .menu.active
+      background: $dark-background-color !important
 
 /* iPads (portrait and landscape) ----------- */
 @media screen and (max-width: 1023px)
   .navbar-mobile
     display none
 
-
 /* Desktops and laptops ----------- */
 
 @media screen and (min-width: 1024px)
   .navbar-mobile
     display none
-
 
 /* post toc Style */
 @media screen and (max-width: 1279px) // 最大宽度1279px时应用这条规则。（最大宽度小于1279px返回false，屏蔽规则。）

@@ -13,38 +13,25 @@
        content "#"
        margin-right 5px
        color $light-post-link-color
-       .dark-theme &
-         color $dark-post-link-color
   h2::before
        content "#"
        margin-right 5px
        color $light-post-link-color
-       .dark-theme &
-         color $dark-post-link-color
 
   h3::before
        content "|"
        margin-right 5px
        color $light-post-link-color
-       .dark-theme &
-         color $dark-post-link-color
   h4::before
        content "*"
        margin-right 5px
        color $light-post-link-color
-       .dark-theme &
-         color $dark-post-link-color
 
   a
     color $light-post-link-color
-    .dark-theme &
-      color $dark-post-link-color
 
   a:hover
     color $light-post-link-hover-color
-    .dark-theme &:hover
-      color $dark-post-link-hover-color
-      text-decoration underline
 
   code, pre
     padding 7px
@@ -94,8 +81,6 @@
     border-spacing 0
     thead
       background $light-post-table-background-color
-      .dark-theme &
-        background $dark-post-table-background-color
     th, td
       padding 5px 15px
       border .5px solid $light-border-color
@@ -130,8 +115,6 @@
       margin-top .5em
       margin-bottom 1em
       color $light-font-secondary-color
-      .dark-theme &
-        color $dark-font-secondary-color
   // end element
 
   blockquote
@@ -149,10 +132,6 @@
     footer
       strong
         margin-right 0.5em
-    .dark-theme &
-      color $dark-font-color
-      background-color $dark-post-blockquote-background-color
-      border-left 2px solid $dark-post-blockquote-border-color
     &.pullquote
       background-color transparent
       max-width 45%
@@ -162,4 +141,28 @@
         text-align left
       &.right
         float right
-        text-align right 
+        text-align right
+
+@media (prefers-color-scheme: dark)
+  .post-content
+    h1::before
+      color $dark-post-link-color
+    h2::before
+      color $dark-post-link-color
+    h3::before
+      color $dark-post-link-color
+    h4::before
+      color $dark-post-link-color
+    a
+      color $dark-post-link-color
+    a:hover
+      color $dark-post-link-hover-color
+      text-decoration underline
+    .image-box-title
+      color $dark-font-secondary-color
+    blockquote
+      color $dark-font-color
+      background-color $dark-post-blockquote-background-color
+      border-left 2px solid $dark-post-blockquote-border-color
+    table thead
+      background $dark-post-table-background-color

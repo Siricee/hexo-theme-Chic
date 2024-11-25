@@ -18,7 +18,7 @@
       color $light-global-link-hover-color
       background-color transparent
     
-    .dark-theme &
+    @media (prefers-color-scheme: dark)
       color $dark-global-link-color
       text-decoration none
       transition color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease
@@ -33,5 +33,5 @@
     text-align right
     color $light-font-secondary-color
 
-    .dark-theme & 
+    @media (prefers-color-scheme: dark)
       color $dark-font-secondary-color
