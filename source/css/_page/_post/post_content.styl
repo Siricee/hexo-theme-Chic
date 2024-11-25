@@ -115,6 +115,8 @@
       margin-top .5em
       margin-bottom 1em
       color $light-font-secondary-color
+      @media (prefers-color-scheme: dark)
+        color $dark-font-secondary-color
   // end element
 
   blockquote
@@ -158,8 +160,6 @@
     a:hover
       color $dark-post-link-hover-color
       text-decoration underline
-    .image-box-title
-      color $dark-font-secondary-color
     blockquote
       color $dark-font-color
       background-color $dark-post-blockquote-background-color
