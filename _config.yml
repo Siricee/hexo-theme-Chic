@@ -104,3 +104,15 @@ mathjax:
   import: demand # global or demand
   ## global: all pages will load mathjax,this will degrade performance and some grammers may be parsed wrong.
   ## demand: Recommend option,if your post need fomula, you can declare 'mathjax: true' in Front-matter
+
+## Comment Support
+comment: 
+  enable: false # if you want to use comment, you can declare 'comment: true' in Front-matter
+  ## Valine: https://valine.js.org/
+  valine:
+    appId: # your leancloud application appid https://leancloud.cn
+    appKey: # your leancloud application appKey
+    placeholder: 'Just Go Go.'
+    meta: 'nick,mail,link'
+    serverURLs: 
+    avatar: 'mp' # mp, identicon, monsterid, wavatar, retro, robohash, hide

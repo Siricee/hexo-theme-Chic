@@ -1,0 +1,27 @@
+<script src="//cdn.jsdelivr.net/npm/valine" async ></script>
+<script type="text/javascript">
+var GUEST = ['nick', 'mail', 'link'],
+    meta = '<%= theme.comment.valine.meta %>';
+meta = meta.split(',').filter(function(item) {
+  return GUEST.indexOf(item) > -1;
+});
+
+var loadValine = function(){
+  if('Valine' in window) {
+    new Valine({
+      el: '#vcomments',
+      appId: '<%= theme.comment.valine.appId %>',
+      appKey: '<%= theme.comment.valine.appKey %>',
+      placeholder: '<%= theme.comment.valine.placeholder %>',
+      avatar: '<%= theme.comment.valine.avatar %>',
+      meta: meta,
+      pageSize: '<%= theme.comment.valine.pageSize %>' || 10,
+      serverURLs: '<%= theme.comment.valine.serverURLs %>' || ''
+    });
+  }else {
+    setTimeout(loadValine)
+  }
+}
+loadValine()
+
+</script>

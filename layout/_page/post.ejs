@@ -89,7 +89,12 @@
             <a class="next" rel="next" href="<%- url_for(post.next.path)%>"><%- post.next.title%></a>
             <% } %>
         </section>
-
+        
+        <div style="clear:both;padding-top:15px;">
+            <% if(theme.comment.enable !== null && theme.comment.enable === true){ %>
+                <div id="vcomments"></div>
+            <% } %>
+        </div>
 
     </article>
 </div>
