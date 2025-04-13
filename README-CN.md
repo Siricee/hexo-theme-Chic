@@ -228,14 +228,14 @@ mathjax:
 - `import`:该字段为 mathjax 的加载方式，可选值为`global`和`demand`。
   - `global`：全局引入，所有页面均加载。好处是便利，缺点是可能会导致部分 markdown 语法被错误解析，比如连续`$$`会被解析为公式；而且全局引入会在没有公式的页面明显浪费页面性能。
   - `demand`【推荐方式】：按需引入。使用方法为在 config 中设置该字段后，文章中如果需要使用 mathjax，在 Front-matter 中声明即可
-    `yaml
+    ```yaml
     ---
     title: MathJax Test
     date: 2019-07-05 21:27:59
     tags:
     mathjax: true # 加入这个声明，这篇文章就会开启mathjax渲染
     ---
-    `
+    ```
     LaTeX 语法这里不做解释，本主题中，单 dollar 符号包围的为行内公式，例：`$f(x)=ax+b$`，双 dollar 符号包围的为块公式，例`$$f(x)=ax+b$$`更多写法请参考 LaTeX 和[Demo site 中的公式测试页面](https://siricee.github.io/hexo-theme-Chic/2019/07/05/MathJax_test/)。
 
 ### 图片标题

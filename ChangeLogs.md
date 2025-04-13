@@ -6,6 +6,7 @@ Changelogs
 
 1. optimized the style of light/dark switch button.
 2. fixed header being selected by mouse clicked twice times.
+3. support highlight code styles with light/dark theme.
 
 ## 2022.2.9
 
