@@ -27,12 +27,12 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Configuration](#configuration)
-  - [Add 'Tag', 'Category' Page](#add-tagcategory-page)
-  - [MathJax (Render LaTeX Formula)](#mathjax-render-latex-formula)
+  - [Add 'Tag', 'Category' Page](#add-tag-category-page)
+  - [MathJax (Render LaTeX formula)](#mathjax-render-latex-formula)
   - [Image-title](#image-title)
 - [Customize](#customize)
 - [FAQ](#faq)
-- [Gallary](#gallary)
+- [Gallery](#gallery)
 - [LICENSE](#license)
 
 
@@ -40,6 +40,7 @@
 An elegant, powerful, easy-to-read Hexo theme.
 
 ## Demo
+
 - [Demo site](https://siricee.github.io/hexo-theme-Chic)
 - <del>[Author's blog](https://siricee.github.io/)</del> (*Not using Hexo currently*)
 
@@ -252,7 +253,22 @@ You can preview image-title and sample code in [Demo site](https://siricee.githu
 
 ## Customize
 
-- Highlight Style: Enter `hexo-theme-Chic\themes\Chic\source\css\style.styl` change stylesheet with key word `_highlight` in link in `_highlight` dictionary.
+- Highlight Style: modify stylus file: `hexo-theme-Chic\themes\Chic\source\css\style`
+  
+  ```css
+  // light theme code-block style
+  body:not(.dark-theme) {
+    @import "_highlight/atelier-forest-light.styl";
+  }
+  // dark theme code-block style
+  body.dark-theme {
+    @import "_highlight/darkula.styl";
+  }
+  ```
+
+  change stylesheet file path in `_highlight` dictionary.
+
+  It should be noted here that the style packages for the **light and dark themes may not be completely identical**. For example, settings such as line height may vary. It is recommended to use different modes of the same code theme package as much as possible, such as `atelier-savanna-light.styl` and `atelier-savanna-dark.styl`.
 
 - Customize stylesheets in this [stylus](https://stylus-lang.com/) file:
 
@@ -283,14 +299,17 @@ You can preview image-title and sample code in [Demo site](https://siricee.githu
 2. How to set the dark theme as default for whole site automatically?
    
    Answer: You need to change some code in `themes\Chic\source\js\script.js`, function `doucument.ready` as shown below.
+
    ```javascript
-   document.ready(
-    function () {
-        // ...Omit part of the code
-        const isDark = currentTheme === 'dark';
-        // change this line to
-        // const isDark = currentTheme !== 'dark';
+    document.ready(
+        // toggleTheme function.
+        // this script shouldn't be changed.
+        () => {
+            const pagebody = document.getElementsByTagName('body')[0]
+
+            const default_theme = 'light' // change this value to 'dark'
    ```
+
    Now, you have already set the dark theme as default successfully.
 
 3. More questions will be added...
@@ -306,6 +325,7 @@ You can preview image-title and sample code in [Demo site](https://siricee.githu
 ![smartmockups_jwrd9y4r.png](https://i.loli.net/2019/06/12/5d00a085ec26284832.png)
 
 ## LICENSE
-Chic © [@Sirice](https://github.com/Siricee)
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+![](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
