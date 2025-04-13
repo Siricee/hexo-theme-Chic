@@ -1,0 +1,44 @@
+.switch_default[type=checkbox] {
+	display: none;
+}
+
+.switch_default + label {
+	cursor: pointer;
+	text-indent: -9999px;
+	background: #e5e5e5;
+	display: inline-block;
+	height: 14px;
+	width: 30px;
+	border-radius: 8px;
+	position: relative;
+}
+
+.switch_default + label:after {
+	content: '';
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	width: 12px;
+	height: 12px;
+	background: #fff;
+	border-radius: 6px;
+	border: 1px solid lightgray;
+	box-sizing: border-box;
+}
+
+.switch_default + label:active {
+	transition: 0.3s;
+}
+
+.switch_default:checked + label {
+	background: #4699a5;
+}
+
+.switch_default:checked + label:after {
+	left: calc(100% - 1px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 26px;
+}
