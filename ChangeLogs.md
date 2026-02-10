@@ -1,5 +1,29 @@
 Changelogs
 
+## 2025.4.12
+
+\[enhancement\]  
+
+1. optimized the style of light/dark switch button.
+2. fixed header being selected by mouse clicked twice times.
+3. support highlight code styles with light/dark theme.
+
+## 2022.2.9
+
+\[enhancement\] optimize the layout of profile on the mobile terminal.
+
+## 2021.5.25
+
+\[fix bugs\] fixed issue#98. add rules of scrollbar in body.
+
+## 2020.3.28
+
+\[fix bugs\] merged PR#68. fix typo in links icon. 
+
+## 2020.2.2
+
+\[enhancement\] add image-title. 
+
 ## 2019.10.18
 
 \[enhancement\] add SEO meta name `author,subtitle`.

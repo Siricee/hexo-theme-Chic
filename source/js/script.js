@@ -32,57 +32,36 @@
 document.ready(
     // toggleTheme function.
     // this script shouldn't be changed.
-    function () {
-        var _Blog = window._Blog || {};
-        const currentTheme = window.localStorage && window.localStorage.getItem('theme');
-        const isDark = currentTheme === 'dark';
-        if (isDark) {
-            document.getElementById("switch_default").checked = true;
-            // mobile
-            document.getElementById("mobile-toggle-theme").innerText = "· 夜间"
-        } else {
-            document.getElementById("switch_default").checked = false;
-            // mobile
-            document.getElementById("mobile-toggle-theme").innerText = "· 日间"
-        }
-        _Blog.toggleTheme = function () {
-            if (isDark) {
-                document.getElementsByTagName('body')[0].classList.add('dark-theme');
-                // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· 夜间"
+    () => {
+        const pagebody = document.getElementsByTagName('body')[0]
+
+        const default_theme = 'light' // 'dark'
+
+        function setTheme(status = 'light') {
+            if (status === 'dark') {
+                window.sessionStorage.theme = 'dark'
+                pagebody.classList.add('dark-theme');
+                document.getElementById("switch_default").checked = true
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
             } else {
-                document.getElementsByTagName('body')[0].classList.remove('dark-theme');
-                // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· 日间"
+                window.sessionStorage.theme = 'light'
+                pagebody.classList.remove('dark-theme');
+                document.getElementById("switch_default").checked = false
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
             }
-            document.getElementsByClassName('toggleBtn')[0].addEventListener('click', () => {
-                if (document.getElementsByTagName('body')[0].classList.contains('dark-theme')) {
-                    document.getElementsByTagName('body')[0].classList.remove('dark-theme');
-                } else {
-                    document.getElementsByTagName('body')[0].classList.add('dark-theme');
-                }
-                window.localStorage &&
-                window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light',)
-            })
-            // moblie
-            document.getElementById('mobile-toggle-theme').addEventListener('click', () => {
-                if (document.getElementsByTagName('body')[0].classList.contains('dark-theme')) {
-                    document.getElementsByTagName('body')[0].classList.remove('dark-theme');
-                    // mobile
-                    document.getElementById("mobile-toggle-theme").innerText = "· 日间"
-
-                } else {
-                    document.getElementsByTagName('body')[0].classList.add('dark-theme');
-                    // mobile
-                    document.getElementById("mobile-toggle-theme").innerText = "· 夜间"
-                }
-                window.localStorage &&
-                window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light',)
-            })
         };
-        _Blog.toggleTheme();
 
-        // ready function.
+        setTheme(window.sessionStorage.theme ?? default_theme)
 
+        document.getElementsByClassName('toggleBtn')[0].addEventListener('click', () => {
+            window.sessionStorage.theme = window.sessionStorage.theme === 'dark' ? 'light' : 'dark'
+            setTheme(window.sessionStorage.theme)
+            document.getElementById("switch_default").checked = window.sessionStorage.theme === 'light'
+        })
+        document.getElementById('mobile-toggle-theme').addEventListener('click', () => {
+            window.sessionStorage.theme = window.sessionStorage.theme === 'dark' ? 'light' : 'dark'
+            setTheme(window.sessionStorage.theme)
+            document.getElementById("mobile-toggle-theme").innerText = window.sessionStorage.theme === 'light' ? "· Light" : "· Dark"
+        })
     }
 );

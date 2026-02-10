@@ -31,25 +31,20 @@
 
 
         .menu-toggle 
+          display: flex;
           cursor: pointer
           line-height: 5.5em
-          padding auto 2em
-
-          span 
+          user-select none
+          
+          .menu-icon
             display: block
-            background: #000
-            width: 36px
-            height: 2px
-            -webkit-border-radius: 3px
-            -moz-border-radius: 3px
-            border-radius: 3px
-            -webkit-transition: .25s margin .25s, .25s transform
-            -moz-transition: .25s margin .25s, .25s transform
-            transition: .25s margin .25s, .25s transform
-
-            .dark-theme & 
-              background: $dark-font-color
-            
+          .close-icon
+            display: none
+          &.active
+            .menu-icon
+              display: none
+            .close-icon
+              display: block
           
 
           span:nth-child(1) 
@@ -83,30 +78,21 @@
               transform: rotate(-45deg) translate(8px, -10px)
             
           
-        
-      
-
       .menu 
         text-align: center
-        background: #ffffff
+        background: $light-background-color
         border-top: 1px solid #000000
         padding-top: 1em
         padding-bottom: 1em
+        user-select none
         display: none
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.1)
         a 
-          //display: block
-
-          //changed
           display inline-block
           margin 0 1em
-
           line-height: 2.5em
-        
-
         &.active 
           display: block
-          //changed
           white-space nowrap
           box-sizing border-box
           overflow-x auto
@@ -114,7 +100,6 @@
         .dark-theme & 
           background: $dark-background-color
           border-top: 2px solid $dark-font-secondary-color
-        
       
       .dark-theme & 
         background: $dark-background-color !important

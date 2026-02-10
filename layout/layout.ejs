@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="<%= config.language %>">
+
 <head>
     <%- partial('_partial/head',{cache: true}) %>
 </head>
+
 <body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const pagebody = document.getElementsByTagName('body')[0]
+
+            function setTheme(status) {
+
+                if (status === 'dark') {
+                    window.sessionStorage.theme = 'dark'
+                    pagebody.classList.add('dark-theme');
+
+                } else if (status === 'light') {
+                    window.sessionStorage.theme = 'light'
+                    pagebody.classList.remove('dark-theme');
+                }
+            };
+
+            setTheme(window.sessionStorage.theme)
+        })();
+    </script>
+
     <div class="wrapper">
         <%- partial('_partial/header',{cache: true}) %>
-        <div class="main">
-            <%- body %>
-        </div>
-        <%- partial('_partial/footer',{cache: true}) %>
+            <div class="main">
+                <%- body %>
+            </div>
+            <%- partial('_partial/footer',{cache: true}) %>
     </div>
 </body>
+
 </html>
